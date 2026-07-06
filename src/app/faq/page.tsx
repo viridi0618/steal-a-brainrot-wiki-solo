@@ -5,7 +5,7 @@ import { faqs } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Guts and Blackpowder FAQ — game info, platforms, modes, weapons, classes, Francs, and more answered",
+    "Steal a Brainrot FAQ — brainrots, traits, trading, events, and more answered",
 };
 
 export default function FAQPage() {
@@ -24,7 +24,7 @@ export default function FAQPage() {
             className="font-sans text-base md:text-lg mt-4 max-w-2xl mx-auto"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Everything you need to know about Guts and Blackpowder
+            Everything you need to know about Steal a Brainrot
           </p>
           <div
             className="mt-6 h-0.5 w-16 rounded-full mx-auto"
@@ -40,7 +40,7 @@ export default function FAQPage() {
             className="font-sans text-sm leading-relaxed mb-10"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Whether you are a new player just discovering Guts and Blackpowder or a veteran looking to deepen your knowledge, this FAQ covers the most commonly asked questions about the game. Click any question to expand the answer.
+            Whether you are a new player just discovering Steal a Brainrot or a veteran collector looking to deepen your knowledge, this FAQ covers the most commonly asked questions about the game.
           </p>
           <div
             className="rounded-lg p-4 md:p-8"
@@ -60,10 +60,10 @@ export default function FAQPage() {
           <div className="rounded-lg p-6" style={{ backgroundColor: "rgba(255,255,255,0.03)", border: "1px solid #2a2826" }}>
             <h3 className="font-serif text-xl text-[#f0ece4] mb-4">More Guides</h3>
             <ul className="space-y-2">
-              <li><a href="/commands" className="text-sm text-[#d4af6a] hover:underline">Admin Commands List</a></li>
-              <li><a href="/badges" className="text-sm text-[#d4af6a] hover:underline">All Badges</a></li>
-              <li><a href="/maps" className="text-sm text-[#d4af6a] hover:underline">All Maps</a></li>
-              <li><a href="/wiki" className="text-sm text-[#d4af6a] hover:underline">Full Wiki</a></li>
+              <li><a href="/brainrots" className="text-sm text-[#d4af6a] hover:underline">All Brainrots</a></li>
+              <li><a href="/traits" className="text-sm text-[#d4af6a] hover:underline">All Traits</a></li>
+              <li><a href="/best-brainrots" className="text-sm text-[#d4af6a] hover:underline">Best Brainrots</a></li>
+              <li><a href="/catalog" className="text-sm text-[#d4af6a] hover:underline">Brainrot Index</a></li>
             </ul>
           </div>
         </div>

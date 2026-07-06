@@ -137,3 +137,26 @@ export interface FAQCategory {
   category: string;
   questions: FAQ[];
 }
+
+export interface Brainrot {
+  slug: string;
+  name: string;
+  rarity: string;
+  value: string;
+  income: string;
+  description: string;
+  stats: { label: string; value: string }[];
+  traits: string[];
+  mutations: string[];
+  tips: string;
+}
+
+export interface Trait {
+  slug: string;
+  name: string;
+  effect: string;
+  multiplier: string;
+  howToObtain: string;
+  bestUses: string;
+  description: string;
+}

@@ -2,30 +2,22 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Maps', href: '/maps' },
-  { label: 'Weapons', href: '/weapons' },
-  { label: 'Enemies', href: '/enemies' },
-  { label: 'Guides', href: '/guides' },
-  {
-    label: 'More',
-    href: '/guides',
-    submenu: [
-      { label: 'Wiki', href: '/wiki' },
-      { label: 'Commands', href: '/commands' },
-      { label: 'Badges', href: '/badges' },
-      { label: 'FAQ', href: '/faq' },
-    ],
-  },
+  { label: 'Brainrots', href: '/brainrots' },
+  { label: 'Traits', href: '/traits' },
+  { label: 'Index', href: '/catalog' },
+  { label: 'Best Brainrots', href: '/best-brainrots' },
+  { label: 'Admin Abuse', href: '/admin-abuse' },
+  { label: 'Taco Tuesday', href: '/taco-tuesday' },
+  { label: 'FAQ', href: '/faq' },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +37,6 @@ export default function Header() {
 
   const closeMobile = () => {
     setMobileOpen(false);
-    setDropdownOpen(false);
   };
 
   return (
@@ -61,55 +52,20 @@ export default function Header() {
             href="/"
             className="text-2xl font-bold tracking-wider text-[#f0ece4] hover:text-[#d4af6a] transition-colors duration-200"
           >
-            G&B Wiki
+            SAB Wiki
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) =>
-              link.submenu ? (
-                <div
-                  key={link.label}
-                  className="relative"
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
-                >
-                  <Link
-                    href={link.href}
-                    className="flex items-center gap-1 px-4 py-2 text-sm text-[#f0ece4] hover:text-[#d4af6a] transition-colors duration-200 rounded-md hover:bg-white/5"
-                  >
-                    {link.label}
-                    <ChevronDown
-                      size={14}
-                      className={`transition-transform duration-200 ${
-                        dropdownOpen ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </Link>
-                  {dropdownOpen && (
-                    <div className="absolute top-full left-0 mt-1 w-44 bg-[#05030c] border border-[#2a2826] rounded-md shadow-xl py-2 z-50">
-                      {link.submenu.map((sub) => (
-                        <Link
-                          key={sub.label}
-                          href={sub.href}
-                          className="block px-4 py-2 text-sm text-[#f0ece4] hover:text-[#d4af6a] hover:bg-white/5 transition-colors duration-200"
-                        >
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="px-4 py-2 text-sm text-[#f0ece4] hover:text-[#d4af6a] transition-colors duration-200 rounded-md hover:bg-white/5"
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="px-4 py-2 text-sm text-[#f0ece4] hover:text-[#d4af6a] transition-colors duration-200 rounded-md hover:bg-white/5"
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
           {/* Mobile Hamburger */}
@@ -132,49 +88,16 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col items-center justify-center h-full gap-6 px-6">
-          {navLinks.map((link) =>
-            link.submenu ? (
-              <div key={link.label} className="w-full max-w-xs text-center">
-                <button
-                  className="flex items-center justify-center gap-1 w-full py-3 text-lg text-[#f0ece4] hover:text-[#d4af6a] transition-colors duration-200"
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                >
-                  {link.label}
-                  <ChevronDown
-                    size={16}
-                    className={`transition-transform duration-200 ${
-                      dropdownOpen ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    dropdownOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                >
-                  {link.submenu.map((sub) => (
-                    <Link
-                      key={sub.label}
-                      href={sub.href}
-                      onClick={closeMobile}
-                      className="block py-2 text-base text-[#8a8884] hover:text-[#d4af6a] transition-colors duration-200"
-                    >
-                      {sub.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={closeMobile}
-                className="text-lg text-[#f0ece4] hover:text-[#d4af6a] transition-colors duration-200"
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              onClick={closeMobile}
+              className="text-lg text-[#f0ece4] hover:text-[#d4af6a] transition-colors duration-200"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>

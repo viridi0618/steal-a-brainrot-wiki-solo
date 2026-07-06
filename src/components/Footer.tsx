@@ -2,38 +2,34 @@ import Link from 'next/link';
 
 const footerColumns = [
   {
-    title: 'Guides',
+    title: 'Brainrots',
     links: [
-      { label: 'Maps', href: '/maps' },
-      { label: 'Weapons', href: '/weapons' },
-      { label: 'Enemies', href: '/enemies' },
-      { label: 'Commands', href: '/commands' },
+      { label: 'All Brainrots', href: '/brainrots' },
+      { label: 'Best Brainrots', href: '/best-brainrots' },
+      { label: 'Index', href: '/catalog' },
+      { label: 'Traits', href: '/traits' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Events',
     links: [
-      { label: 'Wiki', href: '/wiki' },
-      { label: 'Badges', href: '/badges' },
+      { label: 'Admin Abuse', href: '/admin-abuse' },
+      { label: 'Taco Tuesday', href: '/taco-tuesday' },
       { label: 'FAQ', href: '/faq' },
-      { label: 'Francs Guide', href: '/guides/francs' },
     ],
   },
   {
     title: 'Community',
     links: [
-      { label: 'Play on Roblox', href: 'https://www.roblox.com/games/12334109280/Guts-Blackpowder' },
-      { label: 'Discord', href: 'https://discord.gg/gutsandblackpowder' },
-      { label: 'Trello Board', href: 'https://trello.com/b/ygxvBipE/guts-blackpowder' },
-      { label: 'Twitter / X', href: 'https://x.com/FuzeStudios' },
+      { label: 'Discord', href: 'https://discord.gg/stealabrainrot' },
+      { label: 'Roblox', href: 'https://www.roblox.com/games/' },
+      { label: 'Twitter/X', href: 'https://x.com/' },
     ],
   },
   {
     title: 'More',
     links: [
-      { label: 'Barry Guide', href: '/guides/barry' },
-      { label: 'Server Status', href: 'https://discord.gg/gutsandblackpowder' },
-      { label: 'Tier List', href: '/guides' },
+      { label: 'Home', href: '/' },
       { label: 'About', href: '/' },
     ],
   },
@@ -73,13 +69,13 @@ export default function Footer() {
             </h3>
             <div className="space-y-2">
               <p className="text-base font-semibold text-[#f0ece4]">
-                Guts and Blackpowder Wiki
+                Steal a Brainrot Wiki
               </p>
               <p className="text-sm text-[#8a8884] leading-relaxed">
-                The complete community wiki for Guts and Blackpowder — a Roblox PvE zombie survival game set during the Napoleonic Wars.
+                The complete community wiki for Steal a Brainrot — collect, trade, and go viral with the best brainrots.
               </p>
               <p className="text-xs text-[#8a8884] pt-2">
-                &copy; {new Date().getFullYear()} G&B Wiki. Not affiliated with Roblox or Fuze Studios.
+                &copy; {new Date().getFullYear()} SAB Wiki. Not affiliated with Roblox.
               </p>
             </div>
           </div>

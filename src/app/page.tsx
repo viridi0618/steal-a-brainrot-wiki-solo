@@ -15,16 +15,16 @@ import {
 } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Guts and Blackpowder Wiki — PvE Zombie Survival Guide, Maps & Weapons",
+  title: "Steal a Brainrot Wiki — Collect, Trade & Go Viral",
 };
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Guts and Blackpowder Wiki",
+    name: "Steal a Brainrot Wiki",
     description:
-      "The complete Guts and Blackpowder wiki. Maps, weapons, enemies, classes, badges, commands and more for the Roblox PvE zombie survival shooter.",
+      "The complete Steal a Brainrot wiki. Brainrots, traits, tier lists, and more.",
     applicationCategory: "GameApplication",
     operatingSystem: "Web",
   };
@@ -61,7 +61,7 @@ export default function Home() {
             className="inline-block text-xs font-medium tracking-[0.2em] uppercase mb-6"
             style={{ color: "#d4af6a" }}
           >
-            Guts and Blackpowder Wiki
+            Steal a Brainrot Wiki
           </span>
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
@@ -77,14 +77,14 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             <CTALink
-              href="https://www.roblox.com/games/12334109280/Guts-Blackpowder"
+              href="#"
               variant="primary"
               external
             >
               Play on Roblox
             </CTALink>
-            <CTALink href="/beginner-guide" variant="secondary">
-              Beginner Guide
+            <CTALink href="/brainrots" variant="secondary">
+              Browse Brainrots
             </CTALink>
           </div>
 
@@ -122,7 +122,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <SectionTitle
             tag="About the Game"
-            title="Guts and Blackpowder"
+            title="Steal a Brainrot"
             align="left"
           />
           <div className="grid md:grid-cols-5 gap-8 mt-10">
@@ -160,10 +160,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 3. GAME MODES SECTION ===== */}
+      {/* ===== 3. BRAINROTS SECTION ===== */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <SectionTitle tag="Game Modes" title="Choose Your Battlefield" />
+          <SectionTitle tag="Brainrots" title="Popular Brainrots" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
             {classes.map((cls) => (
               <InfoCard
@@ -172,17 +172,17 @@ export default function Home() {
                 tag={cls.tag}
                 title={cls.name}
                 description={cls.shortDescription}
-                href="/classes"
+                href="/brainrots"
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== 4. MAPS SECTION ===== */}
+      {/* ===== 4. BRAINROT ZONES SECTION ===== */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <SectionTitle tag="Maps" title="Explore Historical Battlefields" />
+          <SectionTitle tag="Zones" title="Explore Brainrot Zones" />
           <div className="grid md:grid-cols-2 gap-6 mt-10">
             {regions.map((region) => (
               <InfoCard
@@ -190,7 +190,7 @@ export default function Home() {
                 tag={`${region.tag} · ${region.levelRange}`}
                 title={region.name}
                 description={region.description}
-                href="/regions"
+                href="/brainrots"
               />
             ))}
           </div>
@@ -331,17 +331,17 @@ export default function Home() {
             className="text-3xl md:text-4xl font-serif font-bold mb-4"
             style={{ color: "#05030c" }}
           >
-            Ready to Join the Battle?
+            Ready to Start Collecting?
           </h2>
           <p
             className="text-base mb-8 max-w-lg mx-auto"
             style={{ color: "#2a2826" }}
           >
-            Step into the world of Guts and Blackpowder. Choose your battlefield, wield historical weapons, and become a legend of the Napoleonic Wars.
+            Dive into the world of Steal a Brainrot. Collect rare brainrots, unlock powerful traits, and become the ultimate viral sensation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://www.roblox.com/games/12334109280/Guts-Blackpowder"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-full px-8 py-3 text-sm font-medium transition-all duration-300 hover:opacity-90"
@@ -353,14 +353,14 @@ export default function Home() {
               Play on Roblox
             </a>
             <a
-              href="/beginner-guide"
+              href="/brainrots"
               className="inline-block rounded-full px-8 py-3 text-sm font-medium transition-all duration-300 hover:opacity-90"
               style={{
                 border: "2px solid #05030c",
                 color: "#05030c",
               }}
             >
-              Beginner Guide
+              Browse Brainrots
             </a>
           </div>
         </div>

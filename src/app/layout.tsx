@@ -12,18 +12,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Guts and Blackpowder Wiki — PvE Zombie Survival Guide, Maps & Weapons",
-    template: "%s | Guts and Blackpowder Wiki",
+    default: "Steal a Brainrot Wiki — Collect, Trade & Go Viral",
+    template: "%s | Steal a Brainrot Wiki",
   },
   description:
-    "The complete Guts and Blackpowder wiki. Maps, weapons, enemies, classes, badges, commands and more for the Roblox PvE zombie survival shooter.",
+    "The complete Steal a Brainrot wiki. Brainrots, traits, tier lists, admin abuse events, Taco Tuesday, and more.",
   openGraph: {
-    title: "Guts and Blackpowder Wiki — PvE Zombie Survival Guide",
+    title: "Steal a Brainrot Wiki — Collect, Trade & Go Viral",
     description:
-      "The complete Guts and Blackpowder wiki. Maps, weapons, enemies, classes, badges, commands and more for the Roblox PvE zombie survival shooter.",
+      "The complete Steal a Brainrot wiki. Brainrots, traits, tier lists, admin abuse events, Taco Tuesday, and more.",
     type: "website",
     locale: "en_US",
-    siteName: "Guts and Blackpowder Wiki",
+    siteName: "Steal a Brainrot Wiki",
   },
   robots: {
     index: true,

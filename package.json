@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build || ( test -d out/index.html && echo 'Build completed (ignoring Turbopack finalization error)' && exit 0 )",
+    "build": "next build",
+    "vercel-build": "next build; cp -r out public",
     "start": "next start",
     "lint": "eslint"
   },

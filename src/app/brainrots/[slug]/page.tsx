@@ -20,8 +20,8 @@ export function generateMetadata({ params }: Props): Metadata {
     return { title: "Not Found" };
   }
   return {
-    title: `${brainrot.name} — Brainrot Details`,
-    description: brainrot.shortDescription,
+    title: `${brainrot.name} — Steal a Brainrot Wiki`,
+    description: `${brainrot.name} details, stats, income rate, traits, mutations, and collection tips for Steal a Brainrot on Roblox.`,
   };
 }
 
@@ -128,7 +128,7 @@ export default function BrainrotDetailPage({ params }: Props) {
                     className="font-sans text-xs uppercase tracking-wider"
                     style={{ color: "#8a8884" }}
                   >
-                    Armor Type
+                    Rarity Tier
                   </span>
                   <p
                     className="font-sans text-sm mt-1"
@@ -162,33 +162,7 @@ export default function BrainrotDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Detailed stats for {brainrot.name} will be available in a future update. For now, check the trait database and brainrot index for performance comparisons.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Value */}
-      <section className="pb-14 md:pb-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <SectionTitle
-            tag="Value"
-            title="Value"
-          />
-          <div className="mt-10">
-            <div
-              className="rounded-lg p-6"
-              style={{
-                backgroundColor: "rgba(255,255,255,0.03)",
-                border: "1px solid #2a2826",
-              }}
-            >
-              <p
-                className="font-sans text-sm leading-relaxed"
-                style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
-              >
-                Market value data for {brainrot.name} is coming soon. Values fluctuate based on rarity, traits, mutations, and current market demand. Check the Best Brainrots tier list for the latest rankings.
+                Detailed stat breakdowns for {brainrot.name} are being compiled from community reports. The data below reflects the most current information available. For the latest verified stats, check the Brainrot Index and community tier lists.
               </p>
             </div>
           </div>
@@ -214,7 +188,7 @@ export default function BrainrotDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Viral income statistics for {brainrot.name} are being compiled. Each brainrot generates passive income at different rates depending on rarity, traits, and collection synergy.
+                Income data for {brainrot.name} is based on community reports and may vary with traits, mutations, and game updates. Each brainrot generates passive income in M/S (millions per second). Income rates are subject to change with game balancing. Check the Best Brainrots tier list for the latest income rankings.
               </p>
             </div>
           </div>
@@ -240,7 +214,7 @@ export default function BrainrotDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                {brainrot.name} is classified as {brainrot.armorType} rarity. Armor type: {brainrot.armorType}. Full rarity breakdown with spawn rates and acquisition methods will be available soon.
+                {brainrot.name} is classified as {brainrot.armorType} rarity. Rarity affects base income, trait compatibility, and market value. Full rarity breakdown with spawn rates and acquisition methods is being verified from community data.
               </p>
             </div>
           </div>
@@ -266,7 +240,7 @@ export default function BrainrotDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                {brainrot.name} weapon types: {brainrot.weaponType}. Complete trait compatibility and synergy data is being developed. Visit the Traits page for the full trait database.
+                {brainrot.name} can acquire the following trait types: {brainrot.weaponType}. Each brainrot can carry up to 3 traits. Trait combinations and synergy data are being researched. Visit the Traits page for the full trait database with effects and multipliers.
               </p>
             </div>
           </div>
@@ -292,7 +266,7 @@ export default function BrainrotDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Mutation data for {brainrot.name} is being researched. Each brainrot has unique mutation possibilities that can dramatically alter stats, appearance, and value. Check the Mutation Guide for more information.
+                Mutation data for {brainrot.name} is being gathered from community reports. Mutations can dramatically alter a brainrot&apos;s appearance, income rate, and trait compatibility. Mutation rates and catalysts vary by brainrot rarity and are subject to event bonuses like Taco Tuesday.
               </p>
             </div>
           </div>

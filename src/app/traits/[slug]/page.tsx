@@ -22,8 +22,8 @@ export function generateMetadata({ params }: Props): Metadata {
     return { title: "Not Found" };
   }
   return {
-    title: `${trait.name} — Trait Details`,
-    description: trait.description,
+    title: `${trait.name} — Trait Details — Steal a Brainrot Wiki`,
+    description: `${trait.name} trait details for Steal a Brainrot. Effect, multiplier, compatible brainrots, and how to obtain.`,
   };
 }
 
@@ -113,7 +113,7 @@ export default function TraitDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Detailed effect data for the {trait.name} trait is being compiled. This trait modifies brainrot behavior and stats based on its type. Full effect breakdowns with numerical values will be available in a future update.
+                Detailed effect data for the {trait.name} trait is being compiled from community reports and in-game testing. This trait modifies brainrot income and behavior based on its type and the brainrot&apos;s rarity tier. Full effect breakdowns with numerical values will be available once data verification is complete.
               </p>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function TraitDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Multiplier values for the {trait.name} trait are being calculated. Trait multipliers scale with brainrot rarity and trait synergy. Higher rarity traits provide exponentially stronger multipliers.
+                Multiplier values for the {trait.name} trait are being verified. Trait multipliers scale with brainrot rarity and trait synergy. Higher rarity traits provide exponentially stronger multipliers. Community reports and data verification are ongoing for precise multiplier ranges.
               </p>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function TraitDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                The {trait.name} trait can be obtained through breeding, special events, and trading. Compatible brainrots: {trait.classes.map((c) => c.charAt(0).toUpperCase() + c.slice(1)).join(", ")}. Detailed acquisition methods and drop rates are being documented.
+                The {trait.name} trait can be obtained through breeding, special events, and trading. Compatible brainrots: {trait.classes.map((c) => c.charAt(0).toUpperCase() + c.slice(1)).join(", ")}. Detailed acquisition methods and drop rates are being documented from community data.
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function TraitDetailPage({ params }: Props) {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                The {trait.name} trait is best used with brainrots that complement its effects. Strategic recommendations and optimal pairings are being researched. Check the Best Brainrots tier list for meta recommendations.
+                Data pending verification. The {trait.name} trait is best used with brainrots that complement its effects. Strategic recommendations and optimal pairings are being researched from community data. Check the Best Brainrots tier list for meta recommendations.
               </p>
             </div>
           </div>

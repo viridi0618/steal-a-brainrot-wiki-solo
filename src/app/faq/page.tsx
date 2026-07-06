@@ -3,9 +3,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { faqs } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions",
+  title: "Frequently Asked Questions — Steal a Brainrot Wiki",
   description:
-    "Steal a Brainrot FAQ — brainrots, traits, trading, events, and more answered",
+    "Steal a Brainrot FAQ -- brainrots, trading, rebirth, rituals, events, and more answered.",
 };
 
 export default function FAQPage() {
@@ -40,7 +40,7 @@ export default function FAQPage() {
             className="font-sans text-sm leading-relaxed mb-10"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Whether you are a new player just discovering Steal a Brainrot or a veteran collector looking to deepen your knowledge, this FAQ covers the most commonly asked questions about the game.
+            Whether you are a new player just discovering Steal a Brainrot on Roblox or a veteran collector looking to deepen your knowledge of rituals, traits, and events, this FAQ covers the most commonly asked questions about the game.
           </p>
           <div
             className="rounded-lg p-4 md:p-8"

@@ -5,9 +5,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { weaponTypes, professions, faqs } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "All Traits",
+  title: "All Traits — Steal a Brainrot Wiki",
   description:
-    "Complete trait database for Steal a Brainrot",
+    "Complete trait database for Steal a Brainrot. Learn about trait effects, multipliers, and how to obtain them.",
 };
 
 export default function TraitsPage() {
@@ -26,7 +26,7 @@ export default function TraitsPage() {
             className="font-sans text-base md:text-lg mt-4 max-w-2xl mx-auto"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Complete trait database for Steal a Brainrot
+            Complete trait database for Steal a Brainrot -- effects, multipliers, and acquisition methods
           </p>
           <div
             className="mt-6 h-0.5 w-16 rounded-full mx-auto"
@@ -39,10 +39,16 @@ export default function TraitsPage() {
       <section className="pb-12 md:pb-16">
         <div className="max-w-4xl mx-auto px-4">
           <p
+            className="font-sans text-sm leading-relaxed mb-4"
+            style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
+          >
+            Traits are special attributes that modify a brainrot&apos;s income, value, and behavior. Each brainrot can carry up to 3 traits, and certain trait combinations create powerful synergies that can dramatically boost your collection&apos;s performance. Higher rarity traits provide stronger multipliers and are harder to obtain.
+          </p>
+          <p
             className="font-sans text-sm leading-relaxed"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Traits are special attributes that modify a brainrot&apos;s behavior, value, and income potential. Each brainrot can carry up to 3 traits, and certain trait combinations create powerful synergies. Browse the complete trait database below to understand how each trait affects your collection and which brainrots can acquire them.
+            Traits can be obtained through breeding, special events, ritual completions, and trading. Some traits are exclusive to specific brainrots or can only be acquired during limited-time events like Admin Abuse and Taco Tuesday. Browse the complete trait database below to understand how each trait affects your collection.
           </p>
         </div>
       </section>
@@ -52,7 +58,7 @@ export default function TraitsPage() {
         <div className="max-w-7xl mx-auto px-4">
           <SectionTitle
             tag="Database"
-            title="All Traits"
+            title="Traits List"
             subtitle="Every trait in the game with effects and compatible brainrots"
           />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-10">
@@ -88,7 +94,7 @@ export default function TraitsPage() {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Trait multipliers determine how much each trait boosts (or reduces) your brainrot&apos;s stats. Higher rarity traits provide stronger multipliers. Detailed multiplier tables with exact values for each trait are being compiled and will be available in a future update.
+                Trait multipliers determine how much each trait boosts (or modifies) your brainrot&apos;s income and stats. Multiplier values are being verified from community data and in-game testing. Higher rarity traits provide stronger multipliers, but some combinations may produce unexpected effects. Detailed multiplier tables with exact values will be available once data verification is complete.
               </p>
             </div>
           </div>

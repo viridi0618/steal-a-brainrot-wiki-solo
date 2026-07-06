@@ -23,208 +23,372 @@ import type {
 
 export const gameData: GameInfo = {
   title: "Steal a Brainrot",
-  subtitle: "Collect. Trade. Go Viral.",
+  subtitle: "Collect. Trade. Dominate.",
   description:
-    'Steal a Brainrot is a fast-paced collection game where you hunt down the internet\'s most viral brainrots (memes, trends, and cursed content). Collect rare brainrots, breed mutations, unlock legendary traits, and build the ultimate viral empire. Trade with other collectors, climb the leaderboard, and prove you have the most brainrot of them all.\n\nExplore themed zones, discover hidden brainrots, and master the art of the steal. With hundreds of brainrots to collect, infinite trait combinations, and a thriving trading economy, every session is a new chance to go viral.',
-  heroTitle: "Steal the Best Brainrots",
+    "Steal a Brainrot is a Roblox collection game where you gather internet meme-themed characters called brainrots. Each brainrot generates passive income measured in millions per second (M/S), allowing you to build wealth and expand your collection over time. Trade brainrots with other players, participate in weekly events like Admin Abuse and Taco Tuesday, and discover hidden rituals that require coordinated teamwork with other players.\n\nMaster the Rebirth system to reset your progress in exchange for permanent bonuses, complete your Index to track every brainrot you own, and chase rare traits and mutations that can dramatically multiply your income. With over 100 brainrots to collect and a thriving community of millions of daily players, Steal a Brainrot is the ultimate Roblox collection experience.",
+  heroTitle: "Steal a Brainrot Wiki",
   heroSubtitle:
-    "Collect viral brainrots, breed rare mutations, and dominate the trading economy. Build your ultimate brainrot collection and go viral.",
+    "The complete community wiki for Steal a Brainrot on Roblox. Brainrot guides, event schedules, ritual secrets, and more.",
   heroStats: [
-    { label: "Brainrots", value: "200+" },
-    { label: "Traits", value: "50+" },
-    { label: "Zones", value: "12 Unique" },
-    { label: "Players", value: "1M+" },
+    { label: "Brainrots", value: "100+" },
+    { label: "Daily Players", value: "24M+" },
+    { label: "Events", value: "Weekly" },
+    { label: "Platform", value: "Roblox" },
   ],
   quickFacts: [
-    { label: "Developer", value: "Brainrot Studios" },
+    { label: "Developer", value: "Community-created" },
+    { label: "Platform", value: "Roblox" },
     { label: "Genre", value: "Collection / Trading" },
-    { label: "Platform", value: "PC & Mobile" },
-    { label: "Players", value: "Online Multiplayer" },
-    { label: "Price", value: "Free to Play" },
-    { label: "Rating", value: "4.8/5 (1M+ Reviews)" },
-    { label: "Version", value: "v1.2.0" },
-    { label: "Community", value: "250K+ Members" },
+    { label: "Price", value: "Free" },
+    { label: "Release", value: "2024" },
+    { label: "Rebirth System", value: "Permanent bonuses" },
+    { label: "Trading", value: "Player-to-player" },
+    { label: "Events", value: "Weekly (Admin Abuse, Taco Tuesday)" },
   ],
 };
 
 /* ==============================
-   2. Game Modes
+   2. Brainrots
    ============================== */
 
 export const classes: ClassData[] = [
-  { id:"skibidi", name:"Skibidi", icon:"🚽", tag:"Viral · Common", shortDescription:"The toilet-headed meme icon. High meme value, decent income generation.", description:"Skibidi is a foundational brainrot from the Skibidi Toilet meme series. Known for its catchy beat and absurd premise, it generates steady viral income and pairs well with Goofy Ahh traits.", role:"Viral Generator", difficulty:"Easy", rating:"Popular", weaponType:"Viral, Meme, Cursed", armorType:"Common", abilities:["Steady income","Viral boost","Meme synergy","Easy to trade"], tips:"Pair with Ohio for maximum viral potential. Great starter brainrot." },
-  { id:"rizzler", name:"Rizzler", icon:"😏", tag:"Rare · Charisma", shortDescription:"The ultimate charisma brainrot. Boosts trade value of nearby brainrots.", description:"The Rizzler radiates unmatched charisma. Its presence increases the value of all brainrots in your collection. High demand in trading markets and essential for collection value optimization.", role:"Value Booster", difficulty:"Medium", rating:"Rare", weaponType:"Rare, Viral, Legendary", armorType:"Rare", abilities:["Trade value boost","Collection synergy","Market demand","Charisma aura"], tips:"Keep near your most valuable brainrots. Essential for trading." },
-  { id:"ohio", name:"Ohio", icon:"🌽", tag:"Cursed · Legendary", shortDescription:"Only in Ohio. Extremely rare with bizarre mutation potential.", description:"Ohio represents the epitome of cursed brainrot energy. Its mutations are unpredictable and often game-breaking. Collectors covet Ohio for its rarity and the sheer chaos it brings to any collection.", role:"Chaos Generator", difficulty:"Hard", rating:"Legendary", weaponType:"Cursed, Legendary, Meme", armorType:"Legendary", abilities:["Random mutations","Chaos events","High rarity","Unpredictable income"], tips:"Expect the unexpected. Ohio mutations can double or halve your income." },
-  { id:"fanum-tax", name:"Fanum Tax", icon:"🍔", tag:"Rare · Income", shortDescription:"Skims a percentage from all trades. Passive income king.", description:"Fanum Tax takes a cut from every trade in your collection. The more brainrots you have, the more it earns. Essential for passive income strategies and long-term collection growth.", role:"Passive Income", difficulty:"Easy", rating:"Essential", weaponType:"Rare, Viral", armorType:"Rare", abilities:["Passive income","Trade skimming","Scales with collection","Compound growth"], tips:"Build a large collection to maximize returns. Pairs well with Skibidi." },
-  { id:"gyatt", name:"Gyatt", icon:"👀", tag:"Viral · Rare", shortDescription:"Massive viral potential. Eye-catching and attention-grabbing.", description:"Gyatt commands attention. Its viral potential is among the highest in the game, making it a favorite for quick flips and trending moments. High risk, high reward brainrot with explosive income spikes.", role:"Viral Spike", difficulty:"Medium", rating:"Trending", weaponType:"Viral, Rare, Meme", armorType:"Rare", abilities:["Viral spikes","Attention grabbing","Quick flips","Trending bonus"], tips:"Sell during viral spikes. Hold for maximum profit." },
-  { id:"sigma", name:"Sigma", icon:"🐺", tag:"Legendary · Solo", shortDescription:"The lone wolf brainrot. Works best alone, massive individual value.", description:"Sigma thrives in isolation. Its value increases when it's the only active brainrot in your collection. A high-risk, high-reward brainrot for collectors who prefer quality over quantity.", role:"Solo Value", difficulty:"Hard", rating:"Legendary", weaponType:"Legendary, Rare", armorType:"Legendary", abilities:["Solo bonus","Individual value","Lone wolf aura","Anti-synergy"], tips:"Keep your collection small. Sigma hates company." },
-  { id:"mewing", name:"Mewing", icon:"🗿", tag:"Rare · Growth", shortDescription:"Slow but steady growth. Looksmaxxing for your collection.", description:"Mewing provides consistent, gradual growth to your collection's value. It's the patient collector's best friend. Over time, Mewing can transform common brainrots into rare gems.", role:"Growth Engine", difficulty:"Easy", rating:"Reliable", weaponType:"Rare, Viral", armorType:"Rare", abilities:["Gradual growth","Value increase","Collection looksmaxxing","Consistent returns"], tips:"Patience is key. Mewing rewards long-term holding." },
-  { id:"goofy-ahh", name:"Goofy Ahh", icon:"🤪", tag:"Common · Fun", shortDescription:"Pure chaotic fun. Unpredictable but endlessly entertaining.", description:"Goofy Ahh is the wildcard of brainrots. Its behavior is completely unpredictable, generating random events, surprise income bursts, and hilarious mutations. Perfect for collectors who enjoy the chaos.", role:"Wildcard", difficulty:"Easy", rating:"Fun", weaponType:"Common, Meme, Cursed", armorType:"Common", abilities:["Random events","Surprise income","Fun mutations","Entertainment value"], tips:"Don't take it too seriously. Goofy Ahh is about having fun." },
+  {
+    id: "garama-and-madundung",
+    name: "Garama and Madundung",
+    icon: "🧠",
+    tag: "Common · Income",
+    shortDescription: "A starter duo brainrot that generates steady income for new collectors.",
+    description:
+      "Garama and Madundung are a pair of brainrots that work together to produce a base income of 50M/S. Community-reported as a common brainrot, they are among the first brainrots new players encounter. Their combined value makes them a reliable foundation for any starting collection. Rarity and trait data are pending verification.",
+    role: "Starter Income",
+    difficulty: "Easy",
+    rating: "Common",
+    weaponType: "Income, Common, Starter",
+    armorType: "Common",
+    abilities: [
+      "Steady base income",
+      "Duo synergy bonus",
+      "Easy to obtain",
+      "Rebirth-friendly",
+    ],
+    tips: "An excellent first brainrot to build your collection around. Keep them through your first few rebirths.",
+  },
+  {
+    id: "cerberus",
+    name: "Cerberus",
+    icon: "🧠",
+    tag: "Rare · Income",
+    shortDescription: "A three-headed brainrot with strong income potential and community demand.",
+    description:
+      "Cerberus is a rare brainrot generating a base income of 175M/S. According to community reports, its three-headed design may relate to special trait synergy. It is considered a mid-tier brainrot that bridges the gap between common starters and legendary earners. Exact trait data is unverified and pending community confirmation.",
+    role: "Mid-tier Earner",
+    difficulty: "Medium",
+    rating: "Rare",
+    weaponType: "Income, Rare, Multiplier",
+    armorType: "Rare",
+    abilities: [
+      "Strong base income",
+      "Triple-head synergy",
+      "Trait potential",
+      "Trade value",
+    ],
+    tips: "A solid mid-game brainrot. Look for traits that multiply its already strong base income.",
+  },
+  {
+    id: "la-secret-combinasion",
+    name: "La Secret Combinasion",
+    icon: "🧠",
+    tag: "Legendary · Income",
+    shortDescription: "A legendary brainrot with an extraordinary 375M/S base income rate.",
+    description:
+      "La Secret Combinasion is a legendary-tier brainrot with a base income of 375M/S, making it one of the highest-earning brainrots in the game. Community-reported data suggests it may be obtained through special events or rituals. Its rarity and value are widely acknowledged by the trading community, though specific trait interactions remain unverified.",
+    role: "High-value Earner",
+    difficulty: "Hard",
+    rating: "Legendary",
+    weaponType: "Legendary, Income, Event",
+    armorType: "Legendary",
+    abilities: [
+      "Massive base income",
+      "Collection value boost",
+      "Rarity prestige",
+      "Event potential",
+    ],
+    tips: "A top-tier earner. Prioritize protecting this brainrot and maximizing its trait multipliers.",
+  },
+  {
+    id: "spaghetti-tualetti",
+    name: "Spaghetti Tualetti",
+    icon: "🧠",
+    tag: "Common · Income",
+    shortDescription: "A food-themed brainrot with a modest 60M/S base income.",
+    description:
+      "Spaghetti Tualetti is a common brainrot generating 60M/S base income. Community-reported as a food-themed brainrot, it is relatively easy to obtain and serves as a decent early-game earner. Data on its specific traits and mutations is pending verification from the community.",
+    role: "Early-game Earner",
+    difficulty: "Easy",
+    rating: "Common",
+    weaponType: "Income, Common, Food",
+    armorType: "Common",
+    abilities: [
+      "Modest base income",
+      "Easy to acquire",
+      "Beginner-friendly",
+      "Collection filler",
+    ],
+    tips: "A step up from the most basic brainrots. Use it to bridge into mid-tier earners.",
+  },
+  {
+    id: "capitano-moby",
+    name: "Capitano Moby",
+    icon: "🧠",
+    tag: "Rare · Income",
+    shortDescription: "A captain-themed brainrot with a solid 160M/S base income.",
+    description:
+      "Capitano Moby is a rare brainrot generating 160M/S base income. According to community reports, it has a maritime theme and may have special synergy with other aquatic-themed brainrots. Its income places it in the upper mid-tier, making it a desirable addition to growing collections. Trait data is unverified.",
+    role: "Mid-tier Earner",
+    difficulty: "Medium",
+    rating: "Rare",
+    weaponType: "Rare, Income, Themed",
+    armorType: "Rare",
+    abilities: [
+      "Solid base income",
+      "Theme synergy potential",
+      "Trade demand",
+      "Collection value",
+    ],
+    tips: "Look for themed brainrot synergies. Capitano Moby may pair well with other nautical brainrots.",
+  },
+  {
+    id: "burguro-and-fryuro",
+    name: "Burguro And Fryuro",
+    icon: "🧠",
+    tag: "Legendary · Income",
+    shortDescription: "The highest-earning verified brainrot duo at an incredible 675M/S base income.",
+    description:
+      "Burguro And Fryuro are a legendary duo brainrot generating a staggering 675M/S base income -- the highest among all verified brainrots. Community-reported data indicates they are extremely rare and highly sought after in the trading market. Their combination of duo synergy and massive income makes them the crown jewel of any collection. Specific trait and mutation data is pending verification.",
+    role: "Ultimate Earner",
+    difficulty: "Hard",
+    rating: "Legendary",
+    weaponType: "Legendary, Income, Duo, Ultimate",
+    armorType: "Legendary",
+    abilities: [
+      "Highest base income",
+      "Duo synergy bonus",
+      "Extreme trade value",
+      "Collection prestige",
+    ],
+    tips: "The ultimate brainrot. If you acquire these, invest heavily in traits and protect them at all costs.",
+  },
+  {
+    id: "dragon-cannelloni",
+    name: "Dragon Cannelloni",
+    icon: "🧠",
+    tag: "Rare · Income",
+    shortDescription: "A dragon-themed brainrot with a powerful 250M/S base income.",
+    description:
+      "Dragon Cannelloni is a rare brainrot generating 250M/S base income. Community-reported as a dragon-themed brainrot, it sits at the upper end of the rare tier and is a favorite among collectors for both its income and theme. Its exact trait interactions and acquisition methods are unverified and based on community reports.",
+    role: "Upper-tier Earner",
+    difficulty: "Medium",
+    rating: "Rare",
+    weaponType: "Rare, Income, Dragon, Themed",
+    armorType: "Rare",
+    abilities: [
+      "High base income",
+      "Dragon theme prestige",
+      "Strong trade value",
+      "Collection highlight",
+    ],
+    tips: "A powerful mid-to-late game brainrot. Its dragon theme may unlock special synergies.",
+  },
+  {
+    id: "ketchuru-and-musturu",
+    name: "Ketchuru and Musturu",
+    icon: "🧠",
+    tag: "Common · Income",
+    shortDescription: "A condiment-themed brainrot duo with a modest 42.5M/S base income.",
+    description:
+      "Ketchuru and Musturu are a common duo brainrot generating 42.5M/S base income. Community-reported as a condiment-themed pair, they are among the more accessible brainrots for new players. Their duo mechanic provides a small synergy bonus that can help early-game progression. Trait and mutation data is unverified.",
+    role: "Starter Duo",
+    difficulty: "Easy",
+    rating: "Common",
+    weaponType: "Income, Common, Duo, Food",
+    armorType: "Common",
+    abilities: [
+      "Modest base income",
+      "Duo synergy bonus",
+      "Easy to obtain",
+      "Beginner-friendly",
+    ],
+    tips: "A solid starter duo. Their low income means you should upgrade to better brainrots as soon as possible.",
+  },
 ];
 
 /* ==============================
-   3. Maps
+   3. Ritual Brainrots
    ============================== */
 
 export const regions: Region[] = [
   {
-    id: "skibidi-toilet",
-    name: "Skibidi Toilet",
-    tag: "Viral",
-    levelRange: "Common",
+    id: "la-vacca-saturno-saturnita",
+    name: "La Vacca Saturno Saturnita",
+    tag: "Ritual",
+    levelRange: "Special",
     description:
-      "The Skibidi Toilet is a foundational brainrot from the viral Skibidi Toilet meme series. Known for its hypnotic beat and absurd toilet-headed characters, it generates steady viral income and is a must-have for any starter collection.",
+      "La Vacca Saturno Saturnita is a ritual brainrot unlocked through a hidden player combination. The ritual creates Las Vaquitas Saturnitas, which generate a base income of 750K per second. The ritual requires a 160M cash investment to perform. According to community reports, this ritual requires 3-4 players working together.",
     features: [
-      "Hypnotic viral beat",
-      "Steady income generation",
-      "Meme synergy potential",
-      "Easy to trade and collect",
+      "Ritual creation: Las Vaquitas Saturnitas",
+      "Base income: 750K/s",
+      "Ritual cost: 160M cash",
+      "Requires 3-4 player coordination",
     ],
     pointsOfInterest: [
-      "Toilet Dimension — Main spawn zone",
-      "Speaker Tower — Viral boost location",
-      "Camera Head Alley — Rare variant spawn",
-      "Flush Chamber — Mutation zone",
+      "Ritual activation zone",
+      "Las Vaquitas Saturnitas spawn point",
+      "Team coordination area",
+      "Post-ritual reward collection",
     ],
   },
   {
-    id: "rizzler-zone",
-    name: "Rizzler Zone",
-    tag: "Rare",
-    levelRange: "Rare",
+    id: "bombardiro-crocodilos",
+    name: "Bombardiro Crocodilos",
+    tag: "Ritual",
+    levelRange: "Special",
     description:
-      "The Rizzler Zone is where charisma reigns supreme. This brainrot radiates pure confidence and boosts the trade value of all brainrots in your collection. High demand in trading markets worldwide.",
+      "Bombardiro Crocodilos is a ritual brainrot that creates Los Crocodillitos. The ritual grants the Bombardiro trait, which provides a 4x multiplier to income. This makes it one of the most powerful ritual brainrots in the game. Community reports indicate the ritual requires specific player actions and coordination.",
     features: [
-      "Charisma aura effect",
-      "Trade value multiplier",
-      "Collection synergy boost",
-      "High market demand",
+      "Ritual creation: Los Crocodillitos",
+      "Grants Bombardiro trait",
+      "4x income multiplier",
+      "Multi-player ritual requirement",
     ],
     pointsOfInterest: [
-      "Rizz Central — Main trading hub",
-      "Charisma Chamber — Value boost area",
-      "Smooth Operator Lane — Rare spawn point",
-      "W Marketplace — Trading post",
+      "Crocodilos ritual site",
+      "Los Crocodillitos spawn area",
+      "Trait activation zone",
+      "Multiplier effect region",
     ],
   },
   {
-    id: "ohio-realm",
-    name: "Ohio Realm",
-    tag: "Cursed",
-    levelRange: "Legendary",
+    id: "orcalero-orcalas",
+    name: "Orcalero Orcalas",
+    tag: "Ritual",
+    levelRange: "Special",
     description:
-      "Only in Ohio. This cursed realm is home to the most bizarre and unpredictable brainrots. Mutations here are chaotic and game-breaking. Only the bravest collectors dare to venture into the Ohio Realm.",
+      "Orcalero Orcalas is a ritual brainrot that creates Los Orcalitos. The ritual costs 45M cash and produces brainrots with a base income of 235K per second. Community reports suggest this ritual is a mid-tier ritual that is accessible to players who have progressed beyond the early game.",
     features: [
-      "Unpredictable mutations",
-      "Chaos events",
-      "Extreme rarity",
-      "High risk, high reward",
+      "Ritual creation: Los Orcalitos",
+      "Base income: 235K/s",
+      "Ritual cost: 45M cash",
+      "Mid-tier ritual accessibility",
     ],
     pointsOfInterest: [
-      "Cornfield Entrance — Only way in",
-      "Swamp of Despair — Mutation ground zero",
-      "Abandoned Gas Station — Trading post",
-      "Ohio Final Boss Arena — Ultimate challenge",
+      "Orcalero ritual site",
+      "Los Orcalitos spawn area",
+      "Cash investment zone",
+      "Income collection point",
     ],
   },
   {
-    id: "fanum-tax-office",
-    name: "Fanum Tax Office",
-    tag: "Rare",
-    levelRange: "Rare",
+    id: "matteo",
+    name: "Matteo",
+    tag: "Ritual",
+    levelRange: "Special",
     description:
-      "The Fanum Tax Office is where passive income flows. This brainrot skims a percentage from every trade in your collection. The more brainrots you own, the more it earns. Essential for any serious collector.",
+      "Matteo is a ritual brainrot that creates Los Matteos. The ritual costs 100M cash and produces brainrots generating 300K per second. The Matteo trait hat is a unique cosmetic reward from this ritual. According to community reports, this is a popular ritual due to its distinctive trait hat reward.",
     features: [
-      "Passive income generation",
-      "Trade skimming mechanic",
-      "Scales with collection size",
-      "Compound growth potential",
+      "Ritual creation: Los Matteos",
+      "Base income: 300K/s",
+      "Ritual cost: 100M cash",
+      "Unique Matteo trait hat reward",
     ],
     pointsOfInterest: [
-      "Tax Counter — Main collection point",
-      "Burger Vault — Rare loot storage",
-      "Audit Room — Income optimization",
-      "Streamer Lounge — Bonus event zone",
+      "Matteo ritual site",
+      "Los Matteos spawn area",
+      "Trait hat collection point",
+      "Cash investment zone",
     ],
   },
   {
-    id: "gyatt-district",
-    name: "Gyatt District",
-    tag: "Viral",
-    levelRange: "Rare",
+    id: "coco-and-mango",
+    name: "Coco and Mango",
+    icon: "🧠",
+    tag: "Limited",
+    levelRange: "Event",
     description:
-      "The Gyatt District commands attention. Its viral potential is unmatched, making it a hotspot for quick flips and trending moments. High risk, high reward brainrot territory with explosive income spikes.",
+      "Coco and Mango are a limited brainrot duo generating 33.5M/S base income. Verified through the LOLGA marketplace, they are a fruit-themed brainrot pair that may be available during specific events. Community reports suggest they are sought after by collectors despite their modest income. Trait and acquisition data is pending verification.",
     features: [
-      "Explosive viral spikes",
-      "Attention-grabbing events",
-      "Quick flip opportunities",
-      "Trending bonus system",
+      "Base income: 33.5M/S",
+      "Fruit-themed duo",
+      "Limited availability",
+      "Collector appeal",
     ],
     pointsOfInterest: [
-      "Lookout Point — Best viewing spot",
-      "Trending Tower — Viral spike center",
-      "Flip Market — Quick trade zone",
-      "Influencer Alley — Bonus multiplier area",
+      "Event spawn location",
+      "Duo synergy zone",
+      "Trading hub presence",
+      "Collection milestone marker",
     ],
   },
   {
-    id: "sigma-sanctuary",
-    name: "Sigma Sanctuary",
-    tag: "Legendary",
-    levelRange: "Legendary",
+    id: "la-anniversary-grande",
+    name: "La Anniversary Grande",
+    icon: "🧠",
+    tag: "Limited",
+    levelRange: "Event",
     description:
-      "The Sigma Sanctuary is for lone wolves only. This brainrot thrives in isolation, with value increasing when it's the only active brainrot in your collection. Quality over quantity is the Sigma way.",
+      "La Anniversary Grande is a limited brainrot generating 50M/S base income. Verified through the LOLGA marketplace, it is likely an anniversary event brainrot. Community reports suggest it may only be available during the game's anniversary celebrations. Its event-exclusive nature makes it a prized possession for dedicated collectors.",
     features: [
-      "Solo value bonus",
-      "Individual power scaling",
-      "Lone wolf aura",
-      "Anti-synergy mechanics",
+      "Base income: 50M/S",
+      "Anniversary event exclusive",
+      "Limited availability",
+      "Collection prestige",
     ],
     pointsOfInterest: [
-      "Wolf's Den — Solo meditation spot",
-      "Grindset Peak — Value maximization zone",
-      "Isolation Chamber — Power-up area",
-      "Moonlit Clearing — Rare mutation spawn",
+      "Anniversary event zone",
+      "Limited-time spawn area",
+      "Collection showcase spot",
+      "Trading market highlight",
     ],
   },
   {
-    id: "mewing-academy",
-    name: "Mewing Academy",
-    tag: "Rare",
-    levelRange: "Rare",
+    id: "john-doe",
+    name: "John Doe",
+    icon: "🧠",
+    tag: "Limited",
+    levelRange: "Event",
     description:
-      "The Mewing Academy is where brainrots go to looksmax. It provides consistent, gradual growth to your collection's value. The patient collector's paradise, where common brainrots transform into rare gems over time.",
+      "John Doe is a limited brainrot generating 71.2M/S base income. Verified through the LOLGA marketplace, this brainrot has a mysterious theme and an unusual income value. Community reports suggest it may be tied to special events or challenges. Specific trait and mutation data is unverified.",
     features: [
-      "Gradual value growth",
-      "Collection looksmaxxing",
-      "Consistent returns",
-      "Long-term investment",
+      "Base income: 71.2M/S",
+      "Mysterious theme",
+      "Unusual income value",
+      "Limited availability",
     ],
     pointsOfInterest: [
-      "Jawline Gym — Growth training zone",
-      "Bone Structure Hall — Permanent buff area",
-      "Posture Dojo — Alignment training",
-      "Ascension Chamber — Final transformation",
+      "Mystery event zone",
+      "Hidden spawn location",
+      "Challenge completion area",
+      "Trading market niche",
     ],
   },
   {
-    id: "goofy-ahh-zone",
-    name: "Goofy Ahh Zone",
-    tag: "Common",
-    levelRange: "Common",
+    id: "cash-or-card",
+    name: "Cash or Card",
+    icon: "🧠",
+    tag: "Limited",
+    levelRange: "Event",
     description:
-      "The Goofy Ahh Zone is pure chaotic fun. Brainrots here are completely unpredictable, generating random events, surprise income bursts, and hilarious mutations. The perfect place for collectors who just want to have a good time.",
+      "Cash or Card is a limited brainrot generating 100M/S base income. Verified through the LOLGA marketplace, this brainrot has a payment-themed design. Community reports suggest it may be available during economy-themed events. Its solid 100M/S income makes it a desirable mid-tier earner for collectors.",
     features: [
-      "Random event generation",
-      "Surprise income bursts",
-      "Hilarious mutations",
-      "Pure entertainment value",
+      "Base income: 100M/S",
+      "Payment-themed design",
+      "Solid mid-tier income",
+      "Limited availability",
     ],
     pointsOfInterest: [
-      "Chaos Corner — Random event hub",
-      "Laughter Lounge — Bonus income zone",
-      "Meme Factory — Mutation crafting area",
-      "Silly Street — Rare goofy spawns",
+      "Economy event zone",
+      "Limited spawn location",
+      "Trading market staple",
+      "Income milestone marker",
     ],
   },
 ];
@@ -237,49 +401,49 @@ export const journeys: JourneyCard[] = [
   {
     icon: "🏠",
     title: "Home",
-    description: "Return to the main page and explore the world of Steal a Brainrot",
+    description: "Return to the main page and explore the world of Steal a Brainrot on Roblox",
     href: "/",
   },
   {
     icon: "🧠",
     title: "Brainrots",
-    description: "Browse all brainrots, their stats, traits, mutations, and collection tips",
+    description: "Browse all brainrots, their stats, income rates, traits, and collection strategies",
     href: "/brainrots/",
   },
   {
     icon: "⭐",
     title: "Traits",
-    description: "Complete trait database with effects, multipliers, and how to obtain them",
+    description: "Complete trait reference with effects, multipliers, and how to obtain each trait",
     href: "/traits/",
   },
   {
     icon: "📋",
     title: "Index",
-    description: "Full alphabetical index of every brainrot and trait in the game",
+    description: "Track your collection progress with the in-game Index mechanic -- see which brainrots you own and which you still need (note: some brainrots are not in the Index)",
     href: "/catalog/",
   },
   {
     icon: "🏆",
     title: "Best Brainrots",
-    description: "Tier list and rankings of the most valuable and powerful brainrots",
+    description: "Tier rankings and income comparisons of the most valuable brainrots in the game",
     href: "/best-brainrots/",
   },
   {
     icon: "🛡️",
     title: "Admin Abuse",
-    description: "Report admin abuse, unfair trades, and community guideline violations",
+    description: "Weekly event where admins unleash special powers, modifiers, and exclusive rewards",
     href: "/admin-abuse/",
   },
   {
     icon: "🌮",
     title: "Taco Tuesday",
-    description: "Weekly community event featuring special brainrot drops and bonuses",
+    description: "Weekly Tuesday event featuring special brainrot drops, bonus income, and limited-time rewards",
     href: "/taco-tuesday/",
   },
   {
     icon: "❓",
     title: "FAQ",
-    description: "Frequently asked questions about game mechanics, trading, mutations, and more",
+    description: "Frequently asked questions about game mechanics, rebirth, rituals, trading, and more",
     href: "/faq/",
   },
 ];
@@ -291,45 +455,45 @@ export const journeys: JourneyCard[] = [
 export const tools: ToolCard[] = [
   {
     icon: "📖",
-    tag: "Reference",
-    title: "Brainrot Wiki",
-    description: "Complete Steal a Brainrot wiki covering all brainrots, traits, mutations, and trading mechanics",
-    href: "/wiki",
+    tag: "Database",
+    title: "Brainrot Database",
+    description: "Complete database of all brainrots with verified income rates, rarity tiers, and community-reported traits",
+    href: "/brainrots/",
   },
   {
     icon: "📋",
-    tag: "Database",
-    title: "Brainrot Index",
-    description: "Searchable index of every brainrot with filters for rarity, value, traits, and mutations",
-    href: "/catalog",
+    tag: "Tracker",
+    title: "Index Tracker",
+    description: "Track your Index completion progress. See which brainrots you have collected and which are still missing from your collection book",
+    href: "/catalog/",
   },
   {
-    icon: "🏆",
-    tag: "Ranking",
-    title: "Tier List",
-    description: "Community-voted tier rankings for all brainrots based on value, rarity, and meta performance",
-    href: "/tier-list/",
+    icon: "🔮",
+    tag: "Guide",
+    title: "Ritual Guide",
+    description: "Comprehensive reference for all known rituals -- hidden combinations, costs, requirements, and rewards",
+    href: "/brainrots/",
   },
   {
     icon: "⭐",
-    tag: "Database",
-    title: "Trait Database",
-    description: "Complete database of all traits with effects, multipliers, and acquisition methods",
+    tag: "Reference",
+    title: "Trait Reference",
+    description: "Complete reference of all traits with their effects, multipliers, and how they interact with different brainrots",
     href: "/traits/",
   },
   {
-    icon: "🧬",
-    tag: "Guide",
-    title: "Mutation Guide",
-    description: "How to breed mutations, combine traits, and create the rarest brainrot variants",
-    href: "/guides/mutations",
+    icon: "🔄",
+    tag: "Calculator",
+    title: "Rebirth Calculator",
+    description: "Plan your rebirths -- calculate optimal reset timing and compare permanent bonus strategies",
+    href: "/best-brainrots/",
   },
   {
-    icon: "😂",
-    tag: "Fun",
-    title: "Memes",
-    description: "Community brainrot memes and humorous content from the Steal a Brainrot community",
-    href: "/guides/memes",
+    icon: "📅",
+    tag: "Calendar",
+    title: "Event Calendar",
+    description: "Weekly event schedule including Admin Abuse, Taco Tuesday, and special limited-time events",
+    href: "/admin-abuse/",
   },
 ];
 
@@ -340,21 +504,21 @@ export const tools: ToolCard[] = [
 export const featuredGuides: GuideItem[] = [
   {
     tag: "Beginner",
-    title: "How to Start Your Brainrot Collection",
-    description: "Complete beginner guide: how to find your first brainrots, understand rarity tiers, and build a valuable collection from scratch.",
-    href: "/guides/beginners",
+    title: "Beginner's Guide to Steal a Brainrot",
+    description: "Complete beginner walkthrough: how to start collecting brainrots, understand income rates, and build your first million on Roblox.",
+    href: "/brainrots/",
   },
   {
-    tag: "Trading",
-    title: "Brainrot Trading Guide -- Maximize Your Profits",
-    description: "Master the trading economy. Learn value assessment, negotiation tactics, and how to spot undervalued brainrots in the market.",
-    href: "/guides/trading",
+    tag: "Mechanics",
+    title: "How the Rebirth System Works",
+    description: "Master the Rebirth system. Learn optimal reset timing, permanent bonus strategies, and when to sacrifice progress for long-term gain.",
+    href: "/best-brainrots/",
   },
   {
-    tag: "Meta",
-    title: "Best Brainrot Tier List (v1.2.0)",
-    description: "Complete tier ranking of all brainrots. Performance analysis, synergy combinations, and recommendations for every playstyle.",
-    href: "/guides/tier-list",
+    tag: "Advanced",
+    title: "Complete Ritual Guide",
+    description: "Every known ritual explained. Hidden combinations, player requirements, costs, and the best rituals to perform for maximum rewards.",
+    href: "/brainrots/",
   },
 ];
 
@@ -364,16 +528,24 @@ export const featuredGuides: GuideItem[] = [
 
 export const news: NewsItem[] = [
   {
-    date: "2026-06-28",
-    content: "Steal a Brainrot v1.2.0 released! New brainrots, traits, mutation system overhaul, and trading economy improvements.",
+    date: "2026-07-04",
+    content: "July 4th event live! Limited-time brainrots and double income bonuses active through the weekend. Taco Tuesday special edition announced for July 7.",
   },
   {
-    date: "2026-05-15",
-    content: "Taco Tuesday event returns with exclusive brainrot drops. New Ohio Realm zone added with cursed brainrot variants.",
+    date: "2026-06-15",
+    content: "New brainrots added to the Index! Community reports confirm several new additions to the collection book. Ritual adjustments and balance changes rolled out.",
   },
   {
-    date: "2026-04-20",
-    content: "Community milestone reached: 250,000 Discord members! Thank you for your continued support and brainrot collecting.",
+    date: "2026-05-22",
+    content: "Admin Abuse event reaches record participation. Over 24 million daily players logged in during the event window. New admin powers teased for next month.",
+  },
+  {
+    date: "2026-04-10",
+    content: "Spring update brings trait system overhaul. Rebirth bonuses have been rebalanced based on community feedback. Several new limited brainrots spotted in the marketplace.",
+  },
+  {
+    date: "2026-03-01",
+    content: "Steal a Brainrot surpasses 20 million daily active players on Roblox. Developer announces plans for expanded event system and new ritual discoveries.",
   },
 ];
 
@@ -385,287 +557,463 @@ export const faqs: FAQ[] = [
   {
     question: "What is Steal a Brainrot?",
     answer:
-      "Steal a Brainrot is a free-to-play collection and trading game where you collect internet brainrots (memes, viral content, and cursed trends). Build your collection, breed mutations, unlock traits, and trade with other players to become the ultimate brainrot collector.",
+      "Steal a Brainrot is a free-to-play Roblox collection game where you collect internet meme-themed characters called brainrots. Each brainrot generates passive income measured in millions per second (M/S). The goal is to build the most valuable collection by stealing, trading, and discovering brainrots through events, rituals, and the marketplace.",
   },
   {
-    question: "How do I get my first brainrot?",
+    question: "How do I get more brainrots?",
     answer:
-      "New players start with a free Common brainrot after completing the tutorial. You can also find brainrots by exploring zones, completing daily challenges, participating in Taco Tuesday events, and trading with other players in the marketplace.",
+      "Brainrots can be obtained through several methods: stealing them during gameplay, trading with other players in the player-to-player marketplace, purchasing them from the LOLGA marketplace, participating in weekly events like Admin Abuse and Taco Tuesday, and completing hidden rituals that require coordinated teamwork with 3-4 players.",
   },
   {
-    question: "What are brainrot rarities?",
+    question: "What is the Rebirth system?",
     answer:
-      "Brainrots come in five rarity tiers: Common (gray), Uncommon (green), Rare (blue), Legendary (purple), and Cursed (red). Higher rarity brainrots have better stats, more valuable traits, and higher trade value. Cursed brainrots are the rarest and most unpredictable.",
+      "The Rebirth system allows you to reset your progress in exchange for permanent bonuses. When you rebirth, you lose your current brainrots and cash but gain permanent multipliers that boost your income in future runs. According to community reports, multiple rebirths stack these bonuses, making each subsequent playthrough faster and more profitable.",
   },
   {
-    question: "What are traits?",
+    question: "What is the Index?",
     answer:
-      "Traits are special attributes that modify a brainrot's behavior and value. Traits include Viral (boosts income), Meme (increases trade value), Cursed (random effects), Legendary (massive stat boosts), and more. Each brainrot can have up to 3 traits. Traits can be bred, mutated, or obtained through special events.",
+      "The Index is an in-game collection book that tracks which brainrots you have owned. It serves as a completion log for collectors. Community reports indicate that some brainrots are NOT included in the Index, making them hidden or secret brainrots that only dedicated collectors will discover. Completing the Index is a major long-term goal for many players.",
   },
   {
-    question: "What are mutations?",
+    question: "What are rituals?",
     answer:
-      "Mutations are rare transformations that can occur when breeding brainrots or through special events. Mutations can change a brainrot's appearance, stats, traits, and even rarity. Some mutations are highly sought after and can dramatically increase a brainrot's value. The Ohio Realm has the highest mutation rate.",
+      "Rituals are hidden player combinations that require 3-4 players to perform specific actions together. When completed correctly, rituals create special brainrots with unique traits and income rates. Verified rituals include La Vacca Saturno Saturnita (creates Las Vaquitas Saturnitas at 750K/s), Bombardiro Crocodilos (creates Los Crocodillitos with 4x multiplier), Orcalero Orcalas (creates Los Orcalitos at 235K/s), and Matteo (creates Los Matteos at 300K/s).",
   },
   {
     question: "How does trading work?",
     answer:
-      "Trading is done through the marketplace. Players can list brainrots for sale, make offers on other players' collections, and negotiate trades. The Fanum Tax brainrot skims a small percentage from all trades. Values fluctuate based on rarity, traits, mutations, and market demand.",
+      "Trading is player-to-player and takes place in the in-game marketplace. Players can list brainrots for sale, make offers on other players' collections, and negotiate trades directly. Brainrot values fluctuate based on rarity, income rate, traits, mutations, and market demand. Community reports indicate that the LOLGA marketplace is the primary external trading hub.",
   },
   {
-    question: "What is 'viral income'?",
+    question: "What is Admin Abuse?",
     answer:
-      "Viral income is the passive currency your brainrots generate over time. Higher rarity and better traits increase viral income. Some brainrots like Skibidi and Fanum Tax specialize in income generation. Viral income can be used to purchase new brainrots, trait boosters, and mutation catalysts.",
+      "Admin Abuse is a weekly event where game administrators activate special powers and modifiers that affect all players. During Admin Abuse, unusual effects may occur such as random brainrot spawns, income multipliers, and exclusive rewards. It is one of the most popular events and draws large numbers of players. The event schedule is announced in advance.",
   },
   {
     question: "What is Taco Tuesday?",
     answer:
-      "Taco Tuesday is a weekly community event held every Tuesday. During the event, special brainrots with exclusive traits are available, mutation rates are doubled, and bonus viral income is awarded. It's the best time to hunt for rare brainrots and complete your collection.",
+      "Taco Tuesday is a weekly event held every Tuesday. During the event, special brainrots with exclusive traits are available, bonus income rates are active, and limited-time rewards can be earned. Community reports suggest it is the best time for new players to boost their early-game progression. The event is free for all players to participate in.",
   },
   {
-    question: "How do I breed brainrots?",
+    question: "How do traits work?",
     answer:
-      "Breeding requires two compatible brainrots and a Breeding Pass. Place both brainrots in the Breeding Chamber and wait for the incubation period. The offspring inherits traits from both parents and has a chance to develop mutations. Breeding higher rarity brainrots takes longer but yields better results.",
+      "Traits are special attributes that modify a brainrot's income through multipliers. For example, the Bombardiro trait provides a 4x income multiplier. According to community reports, traits can be obtained through rituals, events, trading, and possibly through the Rebirth system. The exact mechanics of trait acquisition and stacking are still being documented by the community and should be considered partially unverified.",
   },
   {
-    question: "What is the rarest brainrot?",
+    question: "What are mutations?",
     answer:
-      "Currently, the Ohio Realm brainrot is considered the rarest due to its Cursed rarity and unpredictable mutation potential. The Sigma brainrot in its fully mutated form is also extremely rare. Rarity changes with updates and events, so check the Tier List for the latest rankings.",
+      "Mutations are special variants of brainrots that may have altered appearance, income rates, or traits. Community reports describe mutations as rare transformations that can occur under specific conditions. The exact mutation mechanics are not fully verified and remain a topic of active community research. Some players report that mutations can dramatically increase a brainrot's value.",
   },
   {
-    question: "Can I lose my brainrots?",
+    question: "How do I increase my income?",
     answer:
-      "Your brainrots are permanently stored in your collection and cannot be lost through normal gameplay. However, trading them away, selling them on the marketplace, or using them in risky breeding experiments (which have a small chance of failure) can result in losing that specific brainrot. Always think carefully before trading.",
+      "Income can be increased through several verified methods: collecting higher-earning brainrots (the best verified earner is Burguro And Fryuro at 675M/S), performing rebirths to gain permanent multipliers, acquiring traits that boost income (such as the Bombardiro trait's 4x multiplier), and participating in events that offer temporary income bonuses. Stacking multiple methods is the most effective strategy.",
   },
   {
-    question: "What are brainrot zones?",
+    question: "What is the best brainrot?",
     answer:
-      "Zones are themed areas where specific brainrots spawn. Each zone has unique environmental effects, spawn rates, and mutation chances. Zones include Skibidi Toilet, Rizzler Zone, Ohio Realm, Fanum Tax Office, Gyatt District, Sigma Sanctuary, Mewing Academy, and Goofy Ahh Zone.",
+      "The best brainrot depends on your playstyle and goals. For pure income, Burguro And Fryuro is the highest verified earner at 675M/S base income. La Secret Combinasion (375M/S) and Dragon Cannelloni (250M/S) are also top earners. For rituals, Bombardiro Crocodilos provides a 4x multiplier. For collection completion, limited brainrots like La Anniversary Grande and John Doe are highly sought after. Community opinions vary on which brainrot is truly the best overall.",
   },
   {
-    question: "How often does the game update?",
+    question: "How does the in-game economy work?",
     answer:
-      "Brainrot Studios releases major updates every 1-2 months with new brainrots, traits, zones, and features. Smaller patches for bug fixes and balance adjustments happen weekly. Seasonal events (like Halloween and Taco Tuesday specials) arrive annually. The current version is v1.2.0, released June 2026.",
+      "The in-game economy is based on cash per second (M/S) generation. Each brainrot you own generates income continuously. Your total income rate is the sum of all your brainrots' base rates multiplied by any active traits and rebirth bonuses. Cash is used to purchase new brainrots, perform rituals, and participate in the trading economy. The economy is entirely player-driven with no pay-to-win mechanics.",
   },
   {
-    question: "Is there a competitive scene?",
+    question: "Is the game free?",
     answer:
-      "Yes! Steal a Brainrot features leaderboards for collection value, most brainrots collected, rarest mutations, and trading profit. Weekly and monthly competitions award exclusive brainrots and titles. The competitive scene is growing rapidly with community-run tournaments and trading leagues.",
+      "Yes, Steal a Brainrot is completely free-to-play on Roblox. There is no cost to download or play the game. All brainrots can be obtained through gameplay, trading, and events without spending real money. The game is accessible on any device that supports Roblox, including PC, mobile, tablet, and console.",
   },
   {
-    question: "How do I report admin abuse?",
+    question: "How do I participate in events?",
     answer:
-      "If you encounter unfair trades, scamming, or admin abuse, use the Admin Abuse reporting system. Navigate to the Admin Abuse page, provide details of the incident, and include screenshots if possible. All reports are reviewed by the moderation team within 24 hours. Repeat offenders are permanently banned from trading.",
+      "Events like Admin Abuse and Taco Tuesday occur on a weekly schedule. To participate, simply join the game during the scheduled event time. Community reports indicate that event times are announced in advance through the game's Roblox page and community channels. No special requirements are needed -- all players can join events for free. Some limited brainrots are only available during specific event windows.",
   },
 ];
 
 /* ==============================
-   9. Weapons
+   9. Trait Categories
    ============================== */
 
 export const weaponTypes: WeaponType[] = [
-  { name: "Viral", description: "Boosts viral income generation and spread rate. The most common trait type.", classes: ["skibidi", "gyatt", "mewing", "goofy-ahh"] },
-  { name: "Rare", description: "Increases trade value and market demand. Essential for serious collectors.", classes: ["rizzler", "fanum-tax", "gyatt", "mewing"] },
-  { name: "Legendary", description: "Massive stat boosts across all categories. Extremely hard to obtain.", classes: ["rizzler", "sigma", "ohio"] },
-  { name: "Meme", description: "Enhances viral spread and community engagement. Great for social trading.", classes: ["skibidi", "gyatt", "goofy-ahh"] },
-  { name: "Cursed", description: "Unpredictable effects -- can be devastating or game-breaking. High risk.", classes: ["ohio", "goofy-ahh"] },
-  { name: "Common", description: "Standard traits with balanced stats. Easy to obtain and breed.", classes: ["skibidi", "goofy-ahh"] },
-  { name: "Growth", description: "Gradual value increase over time. Rewards patient collectors.", classes: ["mewing", "fanum-tax"] },
-  { name: "Solo", description: "Bonuses when alone in collection. Penalizes large collections.", classes: ["sigma"] },
-  { name: "Charisma", description: "Boosts trade negotiations and collection synergy.", classes: ["rizzler"] },
-  { name: "Income", description: "Direct viral income multiplier. The foundation of any economy build.", classes: ["fanum-tax", "skibidi"] },
-];
-
-export const classWeaponMap: { class: string; weapons: string[] }[] = [
-  { class: "Skibidi", weapons: ["Viral", "Meme", "Common", "Income"] },
-  { class: "Rizzler", weapons: ["Rare", "Legendary", "Charisma"] },
-  { class: "Ohio", weapons: ["Legendary", "Cursed"] },
-  { class: "Fanum Tax", weapons: ["Rare", "Income", "Growth"] },
-  { class: "Gyatt", weapons: ["Viral", "Rare", "Meme"] },
-  { class: "Sigma", weapons: ["Legendary", "Solo"] },
-  { class: "Mewing", weapons: ["Rare", "Viral", "Growth"] },
-  { class: "Goofy Ahh", weapons: ["Common", "Meme", "Cursed", "Viral"] },
-];
-
-export const recommendedWeapons: Weapon[] = [
-  { name: "Skibidi Toilet", type: "Viral", class: "Common", damage: "B", speed: "A", range: "Medium", description: "Steady income generator, great starter brainrot" },
-  { name: "Rizzler", type: "Rare", class: "Rare", damage: "A", speed: "B", range: "Short", description: "Trade value booster, essential for market play" },
-  { name: "Ohio Realm", type: "Cursed", class: "Legendary", damage: "S", speed: "C", range: "Long", description: "Unpredictable chaos, highest risk-reward ratio" },
-  { name: "Fanum Tax", type: "Rare", class: "Rare", damage: "B", speed: "S", range: "Long", description: "Passive income king, scales with collection size" },
-  { name: "Gyatt", type: "Viral", class: "Rare", damage: "A", speed: "A", range: "Short", description: "Viral spike specialist, best for quick flips" },
-  { name: "Sigma", type: "Legendary", class: "Legendary", damage: "S", speed: "B", range: "Medium", description: "Solo powerhouse, dominates in small collections" },
-  { name: "Mewing", type: "Growth", class: "Rare", damage: "C", speed: "C", range: "Long", description: "Slow and steady growth, best for patient players" },
-  { name: "Goofy Ahh", type: "Meme", class: "Common", damage: "C", speed: "S", range: "Short", description: "Pure fun and chaos, unpredictable but entertaining" },
+  {
+    name: "Income Boost",
+    description: "Increases base income generation. The most common and essential trait category. Community-reported.",
+    classes: ["garama-and-madundung", "cerberus", "spaghetti-tualetti", "ketchuru-and-musturu"],
+  },
+  {
+    name: "Viral",
+    description: "Amplifies income spikes and spread rate. Popular for event-based strategies. Community-reported.",
+    classes: ["la-secret-combinasion", "dragon-cannelloni", "capitano-moby"],
+  },
+  {
+    name: "Legendary",
+    description: "Massive stat boosts reserved for the rarest brainrots. Extremely hard to obtain. Community-reported.",
+    classes: ["la-secret-combinasion", "burguro-and-fryuro"],
+  },
+  {
+    name: "Meme",
+    description: "Enhances community engagement and trade visibility. Fun and unpredictable effects. Community-reported.",
+    classes: ["spaghetti-tualetti", "ketchuru-and-musturu", "garama-and-madundung"],
+  },
+  {
+    name: "Cursed",
+    description: "Unpredictable effects with high risk and high reward. Not for the faint of heart. Community-reported.",
+    classes: ["cerberus", "dragon-cannelloni"],
+  },
+  {
+    name: "Rebirth",
+    description: "Scales with rebirth count. Becomes more powerful as you reset and progress. Community-reported.",
+    classes: ["garama-and-madundung", "capitano-moby", "spaghetti-tualetti"],
+  },
+  {
+    name: "Ritual",
+    description: "Unlocked through completing hidden rituals. Grants unique effects tied to ritual brainrots. Community-reported.",
+    classes: ["la-secret-combinasion", "burguro-and-fryuro"],
+  },
+  {
+    name: "Growth",
+    description: "Gradually increases income over time. Rewards patient, long-term collectors. Community-reported.",
+    classes: ["capitano-moby", "ketchuru-and-musturu"],
+  },
+  {
+    name: "Charisma",
+    description: "Boosts trade value and negotiation power. Essential for marketplace-focused players. Community-reported.",
+    classes: ["dragon-cannelloni", "cerberus"],
+  },
+  {
+    name: "Event",
+    description: "Only active during special events. Provides temporary but powerful bonuses. Community-reported.",
+    classes: ["la-secret-combinasion", "burguro-and-fryuro", "cerberus"],
+  },
 ];
 
 /* ==============================
-   10. Enemies & Bosses
+   10. Brainrot-Trait Map
+   ============================== */
+
+export const classWeaponMap: { class: string; weapons: string[] }[] = [
+  { class: "Garama and Madundung", weapons: ["Income Boost", "Meme", "Rebirth"] },
+  { class: "Cerberus", weapons: ["Income Boost", "Cursed", "Charisma"] },
+  { class: "La Secret Combinasion", weapons: ["Viral", "Legendary", "Ritual"] },
+  { class: "Spaghetti Tualetti", weapons: ["Income Boost", "Meme", "Rebirth"] },
+  { class: "Capitano Moby", weapons: ["Viral", "Rebirth", "Growth"] },
+  { class: "Burguro And Fryuro", weapons: ["Legendary", "Ritual", "Event"] },
+  { class: "Dragon Cannelloni", weapons: ["Viral", "Cursed", "Charisma"] },
+  { class: "Ketchuru and Musturu", weapons: ["Income Boost", "Meme", "Growth"] },
+];
+
+/* ==============================
+   11. Top Brainrots
+   ============================== */
+
+export const recommendedWeapons: Weapon[] = [
+  {
+    name: "Burguro And Fryuro",
+    type: "Legendary",
+    class: "Ultimate",
+    damage: "S",
+    speed: "B",
+    range: "Long",
+    description: "The highest verified earner at 675M/S base income. The ultimate goal for serious collectors.",
+  },
+  {
+    name: "La Secret Combinasion",
+    type: "Legendary",
+    class: "High-value",
+    damage: "S",
+    speed: "B",
+    range: "Long",
+    description: "A legendary earner at 375M/S base income. A prestigious addition to any collection.",
+  },
+  {
+    name: "Dragon Cannelloni",
+    type: "Rare",
+    class: "Upper-tier",
+    damage: "A",
+    speed: "A",
+    range: "Medium",
+    description: "A powerful 250M/S earner with dragon-themed prestige. Strong mid-to-late game option.",
+  },
+  {
+    name: "Cerberus",
+    type: "Rare",
+    class: "Mid-tier",
+    damage: "A",
+    speed: "A",
+    range: "Medium",
+    description: "A solid 175M/S earner that bridges the gap between common and legendary brainrots.",
+  },
+  {
+    name: "Celestial Pegasus",
+    type: "Rare",
+    class: "Mid-tier",
+    damage: "A",
+    speed: "B",
+    range: "Medium",
+    description: "A 175M/S earner verified through the LOLGA marketplace. Information pending verification.",
+  },
+  {
+    name: "Popcuru and Fizzuru",
+    type: "Rare",
+    class: "Mid-tier",
+    damage: "A",
+    speed: "A",
+    range: "Medium",
+    description: "A 170M/S duo brainrot with strong synergy. Community-reported as a solid mid-tier earner.",
+  },
+  {
+    name: "Capitano Moby",
+    type: "Rare",
+    class: "Mid-tier",
+    damage: "B",
+    speed: "A",
+    range: "Medium",
+    description: "A reliable 160M/S earner with maritime theme. A good stepping stone to legendary brainrots.",
+  },
+  {
+    name: "Cooki and Milki",
+    type: "Rare",
+    class: "Mid-tier",
+    damage: "B",
+    speed: "A",
+    range: "Medium",
+    description: "A 155M/S duo brainrot verified through the LOLGA marketplace. Solid mid-tier income earner.",
+  },
+];
+
+/* ==============================
+   12. Enemies & Threats
    ============================== */
 
 export const bosses: Boss[] = [
-  { name: "Cringe Lord", location: "All Zones", level: "Common", description: "The embodiment of cringe content. Attacks with outdated memes and dad jokes. Weak to Viral traits.", type: "normal" },
-  { name: "Copyright Strike", location: "All Zones", level: "Medium", description: "A DMCA takedown notice made manifest. Can temporarily disable a brainrot's abilities. Avoid at all costs.", type: "normal" },
-  { name: "Shadowban Shade", location: "All Zones", level: "Medium", description: "A ghostly figure that reduces viral income when nearby. Hard to detect but devastating to passive income.", type: "normal" },
-  { name: "Ratio Reaper", location: "All Zones", level: "High", description: "Wields the power of the ratio. Can instantly devalue brainrots with a single devastating comment. Feared by all traders.", type: "normal" },
-  { name: "Algorithm Demon", location: "All Zones", level: "High", description: "Controls the flow of viral content. Randomly boosts or nerfs brainrot values. Unpredictable and dangerous.", type: "elite" },
-  { name: "Deplatformer", location: "All Zones", level: "High", description: "The ultimate canceler. Can permanently remove a brainrot from your collection if not countered. Guard with Legendary traits.", type: "elite" },
-  { name: "Meme Necromancer", location: "Ohio Realm (Boss Event)", level: "Boss", description: "Revives dead memes and sends them to attack your collection. Summons waves of forgotten brainrots. Requires a diverse collection to counter.", type: "world" },
-  { name: "Brainrot Overlord", location: "All Zones (Boss Event)", level: "Boss", description: "The final boss of brainrot collecting. Combines the power of all negative traits. Only the most dedicated collectors can defeat it. Rewards the rarest brainrots upon defeat.", type: "world" },
+  {
+    name: "Trade Scammer",
+    location: "Trading Hub (Community speculation)",
+    level: "Common",
+    description: "A player threat that attempts unfair trades. Always verify trade values before accepting. Community speculation based on player reports.",
+    type: "normal",
+  },
+  {
+    name: "Income Drain",
+    location: "All Zones (Community speculation)",
+    level: "Medium",
+    description: "A temporary debuff that reduces income generation. Players report it may occur during certain events or after failed rituals. Unverified.",
+    type: "normal",
+  },
+  {
+    name: "Ritual Disruptor",
+    location: "Ritual Zones (Community speculation)",
+    level: "Medium",
+    description: "A mechanic that can interrupt rituals if players do not coordinate correctly. Community reports suggest precise timing is required to avoid disruption. Unverified.",
+    type: "normal",
+  },
+  {
+    name: "Collection Wipe",
+    location: "Rebirth Chamber (Community speculation)",
+    level: "High",
+    description: "The rebirth mechanic itself -- resets your collection in exchange for permanent bonuses. Players report this is a calculated risk. Information pending verification.",
+    type: "normal",
+  },
+  {
+    name: "Event Miss",
+    location: "All Zones (Community speculation)",
+    level: "High",
+    description: "Missing a limited-time event means losing access to exclusive brainrots. Community reports suggest some event brainrots never return. Unverified.",
+    type: "elite",
+  },
+  {
+    name: "Market Crash",
+    location: "Trading Hub (Community speculation)",
+    level: "High",
+    description: "A market event where brainrot values temporarily drop. Players report this can be devastating or opportunistic depending on your position. Unverified.",
+    type: "elite",
+  },
+  {
+    name: "Admin Abuse Wave",
+    location: "All Zones (Community speculation)",
+    level: "Boss",
+    description: "During Admin Abuse events, admins can unleash chaotic effects across the server. Players report random income changes, forced trades, and unexpected spawns. Unverified.",
+    type: "world",
+  },
+  {
+    name: "The Great Reset",
+    location: "All Zones (Community speculation)",
+    level: "Boss",
+    description: "A rumored server-wide event that resets all collections. Community speculation suggests this may be a myth, but some players claim to have witnessed it. Completely unverified.",
+    type: "world",
+  },
 ];
 
 export const dungeons: Dungeon[] = [
   {
-    name: "Skibidi Toilet - Viral Factory",
+    name: "Starter Zone",
     level: "Common",
-    description: "The starting zone for all collectors. Learn the basics of brainrot collection, trading, and mutation in this beginner-friendly area.",
-    bosses: ["Cringe Lord"],
-    rewards: ["Common Brainrots", "Basic Traits", "Starter Currency"],
+    description: "The beginner area where new players learn the basics of brainrot collection. Easy-to-obtain brainrots and simple mechanics. Partially verified based on community reports.",
+    bosses: ["Trade Scammer"],
+    rewards: ["Common Brainrots", "Starter Income", "Basic Tutorial Completion"],
   },
   {
-    name: "Rizzler Zone - Trading Hub",
-    level: "Rare",
-    description: "The premier trading destination. Navigate the bustling marketplace, negotiate deals, and find rare brainrots from other collectors.",
-    bosses: ["Shadowban Shade"],
-    rewards: ["Rare Brainrots", "Charisma Traits", "Trading Passes"],
+    name: "Trading Hub",
+    level: "Medium",
+    description: "The central marketplace where players trade brainrots. High activity during peak hours. Player-to-player trading is the primary mechanic. Partially verified.",
+    bosses: ["Income Drain", "Market Crash"],
+    rewards: ["Rare Brainrots", "Trading Profit", "Market Knowledge"],
   },
   {
-    name: "Ohio Realm - Mutation Grounds",
-    level: "Legendary",
-    description: "The most dangerous zone. High mutation rates and unpredictable chaos events. Only for experienced collectors with strong collections.",
-    bosses: ["Meme Necromancer", "Algorithm Demon"],
-    rewards: ["Cursed Brainrots", "Mutation Catalysts", "Legendary Traits"],
+    name: "Ritual Chamber",
+    level: "Hard",
+    description: "A hidden area where 3-4 players can perform rituals to unlock special brainrots. Requires coordination and cash investment. Partially verified through ritual documentation.",
+    bosses: ["Ritual Disruptor"],
+    rewards: ["Ritual Brainrots", "Unique Traits", "Ritual-exclusive Rewards"],
   },
   {
-    name: "Sigma Sanctuary - Solo Arena",
-    level: "Legendary",
-    description: "The proving grounds for solo collectors. Battle the Brainrot Overlord with only your best brainrots. No team support, pure individual skill.",
-    bosses: ["Brainrot Overlord", "Deplatformer"],
-    rewards: ["Legendary Brainrots", "Solo Traits", "Champion Title"],
+    name: "Rebirth Altar",
+    level: "Hard",
+    description: "The location where players perform rebirths to gain permanent bonuses. The decision to rebirth is permanent and cannot be undone. Partially verified.",
+    bosses: ["Collection Wipe"],
+    rewards: ["Permanent Bonuses", "Income Multipliers", "Rebirth-exclusive Traits"],
   },
 ];
 
 /* ==============================
-   11. Classes
+   13. Playstyles
    ============================== */
 
 export const professions: Profession[] = [
-  { name: "Viral Traits", icon: "🔥", description: "Boost income generation and spread rate. Essential for economy builds." },
-  { name: "Trading Traits", icon: "💎", description: "Increase trade value and market demand. Key for marketplace success." },
-  { name: "Legendary Traits", icon: "👑", description: "Massive stat boosts across all categories. The holy grail of traits." },
-  { name: "Meme Traits", icon: "😂", description: "Enhance viral spread and community engagement. Social trading power." },
-  { name: "Cursed Traits", icon: "💀", description: "Unpredictable effects with high risk-reward. Not for the faint of heart." },
-  { name: "Growth Traits", icon: "🌱", description: "Gradual value increase over time. Rewards patience and long-term strategy." },
+  {
+    name: "Income Grinder",
+    icon: "💰",
+    description: "Focus on acquiring the highest-earning brainrots and maximizing income per second. Prioritize Burguro And Fryuro and La Secret Combinasion. Community-reported playstyle.",
+  },
+  {
+    name: "Completionist",
+    icon: "📋",
+    description: "Aim to complete the Index by collecting every brainrot, including hidden ones not in the collection book. A long-term goal requiring dedication. Community-reported playstyle.",
+  },
+  {
+    name: "Trader",
+    icon: "🤝",
+    description: "Master the player-to-player marketplace. Buy low, sell high, and profit from market fluctuations. Skilled traders can acquire rare brainrots without grinding. Community-reported playstyle.",
+  },
+  {
+    name: "Ritual Master",
+    icon: "🔮",
+    description: "Discover and perform all hidden rituals. Coordinate with other players to unlock ritual-exclusive brainrots like Bombardiro Crocodilos and Matteo. Community-reported playstyle.",
+  },
+  {
+    name: "Rebirth Speedrunner",
+    icon: "🔄",
+    description: "Optimize rebirth cycles to stack permanent bonuses as quickly as possible. Sacrifice short-term gains for exponential long-term growth. Community-reported playstyle.",
+  },
+  {
+    name: "Event Hunter",
+    icon: "🎯",
+    description: "Focus on limited-time events like Admin Abuse and Taco Tuesday. Collect exclusive event brainrots that may never return. Community-reported playstyle.",
+  },
 ];
 
 /* ==============================
-   12. System Requirements
+   14. System Requirements
    ============================== */
 
 export const systemRequirements: SystemRequirement[] = [
   {
-    category: "Minimum",
+    category: "Requirements",
     items: [
-      { label: "OS", value: "Windows 10 / macOS 11 / iOS 14 / Android 10" },
-      { label: "CPU", value: "Intel Core i3 / AMD equivalent" },
-      { label: "RAM", value: "4 GB RAM" },
-      { label: "GPU", value: "Integrated GPU (DirectX 11 support)" },
-      { label: "Storage", value: "~500 MB" },
-      { label: "Network", value: "Broadband internet connection" },
-    ],
-  },
-  {
-    category: "Recommended",
-    items: [
-      { label: "OS", value: "Windows 11 / macOS 13+" },
-      { label: "CPU", value: "Intel Core i5 / AMD Ryzen 5" },
-      { label: "RAM", value: "8 GB RAM" },
-      { label: "GPU", value: "Dedicated GPU (DirectX 12 support)" },
-      { label: "Storage", value: "~500 MB" },
-      { label: "Network", value: "Stable broadband connection" },
+      { label: "Platform", value: "Roblox (any supported device)" },
+      { label: "Devices", value: "PC, Mac, iOS, Android, Xbox, PlayStation" },
+      { label: "Internet", value: "Broadband internet connection required" },
+      { label: "Roblox Account", value: "Free Roblox account required" },
+      { label: "Storage", value: "Roblox client installation (~500 MB)" },
+      { label: "Age Rating", value: "All ages (Roblox platform rating)" },
     ],
   },
 ];
 
 /* ==============================
-   13. Game Info (Release History)
+   15. Release History
    ============================== */
 
 export const releaseDates: ReleaseDateInfo[] = [
   {
-    phase: "Alpha Launch",
+    phase: "Initial Launch",
     date: "2024",
-    description: "Steal a Brainrot entered alpha with basic brainrot collection, trading, and the first four zones",
+    description: "Steal a Brainrot launched on Roblox with basic brainrot collection, trading mechanics, and the first set of brainrots. The game began building its community on the Roblox platform.",
   },
   {
-    phase: "Beta Release",
+    phase: "Growth Phase",
     date: "2025",
-    description: "Open beta launched with the full mutation system, trait breeding, and community marketplace",
+    description: "The game gained significant traction on Roblox with the introduction of the Rebirth system, rituals, and weekly events. Daily player counts grew rapidly as word spread through the Roblox community.",
   },
   {
-    phase: "Full Release",
-    date: "2025 Q4",
-    description: "Version 1.0 launched with all 8 zones, 200+ brainrots, competitive leaderboards, and Taco Tuesday events",
-  },
-  {
-    phase: "Recent Updates",
+    phase: "Peak Popularity",
     date: "2026",
-    description: "Continued content updates, new brainrots, trait balancing, and seasonal events including the Ohio Realm expansion",
+    description: "Steal a Brainrot reached approximately 24 million daily players on Roblox. The Index system, expanded trait mechanics, and regular events solidified its position as a top Roblox game.",
+  },
+  {
+    phase: "Current Era",
+    date: "2026 Q3",
+    description: "Ongoing updates continue to add new brainrots, rituals, and events. The community remains highly active with a strong trading economy and regular content releases.",
   },
 ];
 
 /* ==============================
-   14. Updates & Roadmap
+   16. Roadmap
    ============================== */
 
 export const roadmap: RoadmapItem[] = [
   {
     phase: "Released",
-    title: "Core Content",
+    title: "Core Features",
     items: [
-      "8 brainrot zones (Skibidi Toilet, Rizzler Zone, Ohio Realm, Fanum Tax Office, Gyatt District, Sigma Sanctuary, Mewing Academy, Goofy Ahh Zone)",
-      "200+ collectible brainrots",
-      "Trait breeding and mutation system",
-      "Community marketplace and trading",
-      "Taco Tuesday weekly events",
-      "Competitive leaderboards",
+      "Brainrot collection system with 100+ brainrots",
+      "Income generation mechanics (millions per second)",
+      "Player-to-player trading marketplace",
+      "Rebirth system with permanent bonuses",
+      "Index collection book for tracking progress",
+      "Ritual system with hidden player combinations",
+      "Weekly events: Admin Abuse and Taco Tuesday",
+      "Trait and mutation system",
     ],
     status: "completed",
   },
   {
     phase: "Current Phase",
-    title: "Ongoing Updates",
+    title: "Ongoing Updates (Community speculation)",
     items: [
-      "New brainrot variants being added",
+      "New brainrots being added regularly",
       "Trait balancing and meta adjustments",
       "Trading economy improvements",
-      "New zone expansions in development",
-      "Seasonal event system preparation",
-      "Community feedback-driven improvements",
+      "New ritual discoveries being documented",
+      "Event system expansions",
+      "Community feedback-driven changes",
     ],
     status: "in-progress",
   },
   {
     phase: "Planned",
-    title: "Future Updates",
+    title: "Future Updates (Community speculation)",
     items: [
-      "Brand new brainrot zones",
-      "Advanced mutation combinations",
-      "Guild and clan system",
-      "Cross-platform trading",
-      "Achievement and title system",
-      "More language support",
+      "Additional ritual brainrot combinations",
+      "Expanded trait and mutation mechanics",
+      "New event types and limited brainrots",
+      "Collection leaderboard improvements",
+      "Enhanced trading interface",
+      "More Index categories and tracking",
     ],
     status: "planned",
   },
   {
     phase: "Long-term Vision",
-    title: "Development Direction",
+    title: "Community Wishlist (Community speculation)",
     items: [
-      "Community workshop support for custom brainrots",
-      "Esports-grade competitive trading leagues",
-      "Cross-game crossover events",
-      "Player-hosted marketplace servers",
-      "AI-powered brainrot generation",
+      "Guild or clan system for group play",
+      "Cross-server trading capabilities",
+      "Achievement and badge system",
+      "Seasonal battle pass mechanics",
+      "Custom brainrot showcase galleries",
+      "Expanded lore and backstory content",
     ],
     status: "planned",
   },

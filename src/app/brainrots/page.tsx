@@ -5,9 +5,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { classes, faqs } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "All Brainrots",
+  title: "All Brainrots — Steal a Brainrot Wiki",
   description:
-    "Complete list of all brainrots in Steal a Brainrot",
+    "Complete list of all brainrots in Steal a Brainrot on Roblox. Find brainrot stats, income rates, rarity tiers, and collection tips.",
 };
 
 export default function BrainrotsPage() {
@@ -26,7 +26,7 @@ export default function BrainrotsPage() {
             className="font-sans text-base md:text-lg mt-4 max-w-2xl mx-auto"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Complete list of all brainrots in Steal a Brainrot
+            Every collectible brainrot in Steal a Brainrot, with income rates, rarity tiers, and collection tips
           </p>
           <div
             className="mt-6 h-0.5 w-16 rounded-full mx-auto"
@@ -39,10 +39,16 @@ export default function BrainrotsPage() {
       <section className="pb-12 md:pb-16">
         <div className="max-w-4xl mx-auto px-4">
           <p
+            className="font-sans text-sm leading-relaxed mb-4"
+            style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
+          >
+            Brainrots are the core collectible characters in Steal a Brainrot. Each brainrot generates passive income measured in M/S (millions per second), and comes with unique traits, mutations, and rarity tiers. Some brainrots are obtained through standard gameplay, while others require completing hidden rituals with specific player combinations.
+          </p>
+          <p
             className="font-sans text-sm leading-relaxed"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Steal a Brainrot features a growing roster of viral brainrots, each with unique abilities, rarity tiers, and playstyles. From the steady income of Skibidi to the chaotic mutations of Ohio, every brainrot brings something different to your collection. Browse the complete list below to discover which brainrots fit your collection strategy.
+            You can grow your collection by earning brainrots through gameplay, trading with other players in the marketplace, participating in weekly events like Admin Abuse and Taco Tuesday, and discovering secret ritual combinations. Browse the complete list below to find the best brainrots for your collection strategy.
           </p>
         </div>
       </section>

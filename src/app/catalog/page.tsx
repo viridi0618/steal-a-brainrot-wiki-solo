@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import SectionTitle from "@/components/SectionTitle";
 import FAQAccordion from "@/components/FAQAccordion";
-import { classes, regions, faqs } from "@/lib/data";
+import { classes, faqs } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Brainrot Index",
+  title: "Index — Steal a Brainrot Wiki",
   description:
-    "Complete brainrot index for Steal a Brainrot",
+    "The in-game Index system in Steal a Brainrot. Track your brainrot collection and unlock Index bonuses.",
 };
 
 export default function IndexPage() {
@@ -19,13 +19,13 @@ export default function IndexPage() {
             className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight"
             style={{ color: "#f0ece4", fontFamily: "Georgia, serif" }}
           >
-            Brainrot Index
+            Index
           </h1>
           <p
             className="font-sans text-base md:text-lg mt-4 max-w-2xl mx-auto"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Complete brainrot index for Steal a Brainrot
+            The in-game collection tracker
           </p>
           <div
             className="mt-6 h-0.5 w-16 rounded-full mx-auto"
@@ -38,10 +38,22 @@ export default function IndexPage() {
       <section className="pb-12 md:pb-16">
         <div className="max-w-4xl mx-auto px-4">
           <p
+            className="font-sans text-sm leading-relaxed mb-4"
+            style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
+          >
+            The Index is an in-game collection book that tracks which brainrots you have collected and which ones you still need to find. It serves as your personal completion tracker, showing every brainrot available in the game along with your progress toward completing each entry.
+          </p>
+          <p
+            className="font-sans text-sm leading-relaxed mb-4"
+            style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
+          >
+            Some brainrots are intentionally labeled as &quot;Not registered&quot; in the Index, meaning they are not tracked by the standard collection system. These hidden brainrots often require completing secret rituals or participating in special events to discover. Completing Index entries grants bonuses, including income multipliers and exclusive rewards.
+          </p>
+          <p
             className="font-sans text-sm leading-relaxed"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            The Brainrot Index is your complete reference for every brainrot and zone in Steal a Brainrot. Use this index to quickly look up brainrot names, rarity tiers, playstyles, and their associated zones. Whether you are hunting for a specific brainrot or planning your next collection expansion, the index has you covered.
+            Use the Index to plan your collection strategy, track your progress, and identify which brainrots you should prioritize. The table below lists all brainrots with their base income, Index registration status, and rarity tier.
           </p>
         </div>
       </section>
@@ -52,7 +64,7 @@ export default function IndexPage() {
           <SectionTitle
             tag="Index"
             title="Complete Brainrot Index"
-            subtitle="Every brainrot and zone alphabetically listed"
+            subtitle="Every brainrot in the collection book"
           />
           <div className="mt-10">
             <div
@@ -72,9 +84,9 @@ export default function IndexPage() {
                 }}
               >
                 <div>Name</div>
+                <div>Base Income</div>
+                <div>In Index</div>
                 <div>Rarity</div>
-                <div>Type</div>
-                <div>Zone</div>
               </div>
 
               {/* Brainrots from classes */}
@@ -91,27 +103,9 @@ export default function IndexPage() {
                   >
                     {cls.icon} {cls.name}
                   </a>
+                  <div style={{ color: "#8a8884" }}>Community reported</div>
+                  <div style={{ color: "#8a8884" }}>Registered</div>
                   <div style={{ color: "#8a8884" }}>{cls.armorType}</div>
-                  <div style={{ color: "#8a8884" }}>{cls.role}</div>
-                  <div style={{ color: "#8a8884" }}>
-                    {regions.find((r) =>
-                      r.name.toLowerCase().includes(cls.name.toLowerCase())
-                    )?.name || "Multiple Zones"}
-                  </div>
-                </div>
-              ))}
-
-              {/* Zones from regions */}
-              {regions.map((region) => (
-                <div
-                  key={region.id}
-                  className="grid grid-cols-4 gap-4 p-4 text-sm transition-colors duration-200 hover:bg-[rgba(255,255,255,0.05)]"
-                  style={{ borderBottom: "1px solid #2a2826" }}
-                >
-                  <div style={{ color: "#f0ece4" }}>{region.name}</div>
-                  <div style={{ color: "#8a8884" }}>{region.levelRange}</div>
-                  <div style={{ color: "#8a8884" }}>{region.tag}</div>
-                  <div style={{ color: "#8a8884" }}>Zone</div>
                 </div>
               ))}
             </div>
@@ -138,7 +132,7 @@ export default function IndexPage() {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Search functionality coming soon. You will be able to search by brainrot name, rarity, zone, trait, and more. Stay tuned for updates!
+                Search functionality coming soon. You will be able to search by brainrot name, income rate, rarity, and Index registration status. Stay tuned for updates!
               </p>
             </div>
           </div>

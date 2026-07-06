@@ -5,9 +5,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { recommendedWeapons, faqs } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Best Brainrots",
+  title: "Best Brainrots — Steal a Brainrot Wiki",
   description:
-    "Tier list and best brainrots in Steal a Brainrot",
+    "Tier list and rankings of the best brainrots in Steal a Brainrot. Top earners, best value, and meta recommendations.",
 };
 
 export default function BestBrainrotsPage() {
@@ -26,7 +26,7 @@ export default function BestBrainrotsPage() {
             className="font-sans text-base md:text-lg mt-4 max-w-2xl mx-auto"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Tier list and best brainrots in Steal a Brainrot
+            Tier list and rankings of the best brainrots in Steal a Brainrot
           </p>
           <div
             className="mt-6 h-0.5 w-16 rounded-full mx-auto"
@@ -39,10 +39,16 @@ export default function BestBrainrotsPage() {
       <section className="pb-12 md:pb-16">
         <div className="max-w-4xl mx-auto px-4">
           <p
+            className="font-sans text-sm leading-relaxed mb-4"
+            style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
+          >
+            Not all brainrots are created equal. Some dominate the meta with superior income generation measured in M/S (millions per second), while others shine in trading value, mutation potential, or collection synergy. The top earners -- like Burguro And Fryuro at 675M/S and La Secret Combinasion at 375M/S -- are highly sought after in the marketplace.
+          </p>
+          <p
             className="font-sans text-sm leading-relaxed"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Not all brainrots are created equal. Some dominate the meta with superior income generation, while others shine in trading or collection value. This tier list ranks brainrots based on overall performance, versatility, and community consensus. Whether you are building your first collection or optimizing for competitive play, these rankings will help you make the best choices.
+            Whether you are building your first collection or optimizing for late-game income, these rankings will help you make informed decisions. Income rates are based on community reports and LOLGA marketplace data. Actual in-game performance may vary with traits, mutations, and game updates.
           </p>
         </div>
       </section>
@@ -73,7 +79,7 @@ export default function BestBrainrotsPage() {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                The full tier list with S-Tier, A-Tier, B-Tier, and C-Tier rankings is being compiled. Each brainrot will be ranked with detailed analysis on strengths, weaknesses, and optimal use cases. Check back soon for the complete tier list.
+                The full tier list with S-Tier, A-Tier, B-Tier, and C-Tier rankings is being compiled from community voting. Each brainrot will be ranked with detailed analysis on income rates, trait synergy, and market value. Check back soon for the complete tier list.
               </p>
             </div>
           </div>
@@ -120,7 +126,7 @@ export default function BestBrainrotsPage() {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Late game brainrot rankings are being compiled. The best late game brainrots typically include Legendary and Cursed rarity picks like Ohio, Sigma, and fully mutated variants. Detailed analysis of late game performance, synergy, and optimal collection strategies will be available in a future update.
+                Late game brainrot rankings are being compiled from community data. The top earners based on marketplace reports include Burguro And Fryuro (675M/S), La Secret Combinasion (375M/S), Dragon Cannelloni (250M/S), Cerberus (175M/S), and Celestial Pegasus (175M/S). Detailed analysis of late game performance, synergy, and optimal collection strategies will be available once data verification is complete.
               </p>
             </div>
           </div>

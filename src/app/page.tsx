@@ -24,7 +24,7 @@ export default function Home() {
     "@type": "WebApplication",
     name: "Steal a Brainrot Wiki",
     description:
-      "The complete Steal a Brainrot wiki. Brainrots, traits, tier lists, and more.",
+      "The complete Steal a Brainrot wiki. Brainrots, traits, tier lists, rituals, events, and more.",
     applicationCategory: "GameApplication",
     operatingSystem: "Web",
   };
@@ -172,7 +172,7 @@ export default function Home() {
                 tag={cls.tag}
                 title={cls.name}
                 description={cls.shortDescription}
-                href="/brainrots"
+                href={`/brainrots/${cls.id}`}
               />
             ))}
           </div>
@@ -182,7 +182,7 @@ export default function Home() {
       {/* ===== 4. BRAINROT ZONES SECTION ===== */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <SectionTitle tag="Zones" title="Explore Brainrot Zones" />
+          <SectionTitle tag="Zones" title="Brainrot Zones" />
           <div className="grid md:grid-cols-2 gap-6 mt-10">
             {regions.map((region) => (
               <InfoCard
@@ -218,7 +218,7 @@ export default function Home() {
       {/* ===== 6. TOOLS SECTION ===== */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <SectionTitle tag="Tools & Resources" title="Useful Resources" />
+          <SectionTitle tag="Tools & Resources" title="Tools & Resources" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
             {tools.map((tool) => (
               <InfoCard
@@ -259,8 +259,8 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <CTALink href="/guides" variant="secondary">
-              View All Guides
+            <CTALink href="/brainrots" variant="secondary">
+              View All Brainrots
             </CTALink>
           </div>
         </div>
@@ -337,7 +337,7 @@ export default function Home() {
             className="text-base mb-8 max-w-lg mx-auto"
             style={{ color: "#2a2826" }}
           >
-            Dive into the world of Steal a Brainrot. Collect rare brainrots, unlock powerful traits, and become the ultimate viral sensation.
+            Dive into the world of Steal a Brainrot on Roblox. Collect rare brainrots, unlock powerful traits, complete rituals, and build the ultimate brainrot empire.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

@@ -4,9 +4,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { faqs } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Admin Abuse",
+  title: "Admin Abuse — Steal a Brainrot Wiki",
   description:
-    "Admin Abuse event guide for Steal a Brainrot",
+    "Admin Abuse event guide for Steal a Brainrot. Schedule, rewards, and tips for the weekly admin event.",
 };
 
 export default function AdminAbusePage() {
@@ -25,7 +25,7 @@ export default function AdminAbusePage() {
             className="font-sans text-base md:text-lg mt-4 max-w-2xl mx-auto"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            Admin Abuse event guide for Steal a Brainrot
+            Weekly admin event
           </p>
           <div
             className="mt-6 h-0.5 w-16 rounded-full mx-auto"
@@ -38,10 +38,16 @@ export default function AdminAbusePage() {
       <section className="pb-12 md:pb-16">
         <div className="max-w-4xl mx-auto px-4">
           <p
+            className="font-sans text-sm leading-relaxed mb-4"
+            style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
+          >
+            Admin Abuse is a weekly community event in Steal a Brainrot where game administrators take over the server with special activities, surprise drops, and exclusive brainrot rewards. During Admin Abuse, you can expect rare brainrot spawns, bonus income multipliers, and unique event-only items that are not available during normal gameplay.
+          </p>
+          <p
             className="font-sans text-sm leading-relaxed"
             style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
           >
-            The Admin Abuse event is a special community event in Steal a Brainrot where the game admins take over with chaotic rule changes, surprise drops, and exclusive brainrot rewards. During Admin Abuse, expect the unexpected -- normal game rules are suspended and anything can happen. This guide covers everything you need to know to make the most of Admin Abuse events.
+            Event details are community-reported and subject to change. Admins may introduce temporary rule changes, hidden brainrot spawns, or special trading opportunities. Stay connected with the community through Discord and in-game announcements to catch every Admin Abuse event.
           </p>
         </div>
       </section>
@@ -65,13 +71,13 @@ export default function AdminAbusePage() {
                 className="inline-block font-sans text-xs uppercase tracking-[0.2em] mb-3"
                 style={{ color: "#d4af6a" }}
               >
-                Coming Soon
+                Schedule Varies
               </span>
               <p
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                The Admin Abuse event schedule is being finalized. Admin Abuse events are typically announced on the official Discord server and in-game news feed. Check back regularly or join the community Discord for the latest event announcements.
+                The Admin Abuse event schedule varies. Check the in-game announcements and official Discord server for upcoming Admin Abuse events. Events are typically announced in advance with details on featured brainrots, bonus rates, and duration.
               </p>
             </div>
           </div>
@@ -97,7 +103,7 @@ export default function AdminAbusePage() {
                 className="font-sans text-sm leading-relaxed"
                 style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
               >
-                Admin Abuse events offer exclusive rewards including rare brainrots, limited-edition traits, unique mutation catalysts, and special titles. The rewards vary by event and are often only available during the Admin Abuse window. Detailed reward lists for upcoming events will be posted here.
+                Admin Abuse events offer exclusive rewards that vary by event. Community reports indicate rewards may include rare brainrots, limited-edition traits, unique mutation catalysts, and special titles. Detailed reward data is being verified from community event logs. Rewards are typically only available during the Admin Abuse window.
               </p>
             </div>
           </div>
@@ -119,12 +125,56 @@ export default function AdminAbusePage() {
                 border: "1px solid #2a2826",
               }}
             >
-              <p
-                className="font-sans text-sm leading-relaxed"
-                style={{ color: "#8a8884", fontFamily: "Inter, sans-serif" }}
-              >
-                Tips and strategies for Admin Abuse events are being compiled. Key recommendations include: stay active in the Discord for event announcements, keep your collection ready for surprise trades, and be prepared for chaotic rule changes that can affect your brainrot values. More detailed tips will be available soon.
-              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <span
+                    className="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                    style={{ backgroundColor: "#d4af6a" }}
+                  />
+                  <span
+                    className="font-sans text-sm"
+                    style={{ color: "#8a8884" }}
+                  >
+                    Stay active in the official Discord server for event announcements and real-time updates during Admin Abuse.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span
+                    className="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                    style={{ backgroundColor: "#d4af6a" }}
+                  />
+                  <span
+                    className="font-sans text-sm"
+                    style={{ color: "#8a8884" }}
+                  >
+                    Keep your collection ready for surprise trades and rare brainrot spawns. Have trade currency available.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span
+                    className="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                    style={{ backgroundColor: "#d4af6a" }}
+                  />
+                  <span
+                    className="font-sans text-sm"
+                    style={{ color: "#8a8884" }}
+                  >
+                    Be prepared for temporary rule changes. Admin Abuse events can introduce unexpected mechanics that affect brainrot values and income rates.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span
+                    className="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                    style={{ backgroundColor: "#d4af6a" }}
+                  />
+                  <span
+                    className="font-sans text-sm"
+                    style={{ color: "#8a8884" }}
+                  >
+                    Team up with other players. Coordinated groups can cover more spawn zones and maximize event rewards.
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
